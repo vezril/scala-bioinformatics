@@ -1,12 +1,12 @@
 package bio
 
-import bio.problems.MortalFibonacciProblem
+import bio.problems.{InferringmRNAFromProteinProblem, MortalFibonacciProblem}
 import cats.effect.{ExitCode, IO, IOApp}
 
 object Main extends IOApp {
   def run(args: List[String]): IO[ExitCode] = {
 
-    val result = MortalFibonacciProblem.solve()
+    val result = InferringmRNAFromProteinProblem.solve()
 
     result.as(ExitCode.Success)
   }

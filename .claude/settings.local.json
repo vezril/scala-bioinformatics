@@ -37,7 +37,8 @@
       "Bash(sbt 'testOnly bio.domain.genetics.CouplePopulationSpec')",
       "Bash(sbt 'testOnly bio.algorithms.genetics.ExpectedOffspringSpec')",
       "Bash(sbt 'testOnly bio.domain.recurrence.MortalRabbitProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.recurrence.MortalFibonacciRabbitsSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.recurrence.MortalFibonacciRabbitsSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.protein.InferMRnaSpec')"
     ]
   }
 }
