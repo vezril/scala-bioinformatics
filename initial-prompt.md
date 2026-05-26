@@ -1,0 +1,212 @@
+This will be a bioinformatics project. The goal of this project is to build a framework to be able to work bioinformatics problems.
+
+Tech stack:
+- Backend: Scala 2.13.18 + Cats Effect
+- Tests: Scalatest
+
+TDD is REQUIRED (non-negotiable):
+- Follow Red–Green–Refactor.
+- For every behavior in the specs, write tests FIRST (failing), then implement.
+- The task list must explicitly sequence: tests → implementation → refactor.
+- Always RUN tests after each implementation to ensure they pass.
+
+Include a comprehensive README.md file in the root of the project that explains how to run the application and how to run the tests.
+
+Features (minimal, more features to be added later, this is just to get started). Features will be described as Acceptance Criteria, use these for your TDD tests, additionally, think of at least two edge cases for the tests:
+
+1. Project Setup
+- SBT Config
+- Minimal Hello World Application that uses Cats Effect
+
+2. Counting DNA Nucleotides
+- Problem: A string is simply an ordered collection of symbols selected from some alphabet and formed into a word; the length of a string is the number of symbols that it contains. An example of a length 21 DNA string (whose alphabet contains the symbols 'A', 'C', 'G', and 'T') is "ATGCTTCAGAAAGGTCTTACG."
+- Given: A DNA string s of length at most 1000 nt. 
+- Return: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in s.
+
+3. The Second Nucleic Acid
+- Problem: An RNA string is a string formed from the alphabet containing 'A', 'C', 'G', and 'U'. Given a DNA string t corresponding to a coding strand, its transcribed RNA string u is formed by replacing all occurrences of 'T' in t with 'U' in u.
+- Given: A DNA string t having length at most 1000 nt.
+- Return: The transcribed RNA string of t
+- Sample
+  - Input: GATGGAACTTGACTACGTAAATT
+  - Output: GAUGGAACUUGACUACGUAAAUU
+4. The Secondary and Tertiary Structures of DNA
+- Problem: In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'. The reverse complement of a DNA string s is the string s<sup>c</sup> formed by reversing the symbols of s, then taking the complement of each symbol (e.g., the reverse complement of "GTCA" is "TGAC").
+- Given: A DNA string s of length at most 1000 bp. (bp = Base Pair)
+- Return: The reverse complement s<sup>c</sup> of s
+- Sample
+  - Input: "AAAACCCGGT"
+  - Output: "ACCGGGTTTT"
+5. Introduction to Mendelian Inheritance
+- Problem: Probability is the mathematical study of randomly occurring phenomena. We will model such a phenomenon with a random variable, which is simply a variable that can take a number of different distinct outcomes depending on the result of an underlying random process. For example, say that we have a bag containing 3 red balls and 2 blue balls. If we let X  represent the random variable corresponding to the color of a drawn ball, then the probability of each of the two outcomes is given by Pr(X=red)=35  and Pr(X=blue)=25 . Random variables can be combined to yield new random variables. Returning to the ball example, let Y model the color of a second ball drawn from the bag (without replacing the first ball). The probability of Y being red depends on whether the first ball was red or blue. To represent all outcomes of X and Y, we therefore use a probability tree diagram. This branching diagram represents all possible individual probabilities for X and Y, with outcomes at the endpoints ("leaves") of the tree. The probability of any outcome is given by the product of probabilities along the path from the beginning of the tree; see Figure 2 for an illustrative example. An event is simply a collection of outcomes. Because outcomes are distinct, the probability of an event can be written as the sum of the probabilities of its constituent outcomes. For our colored ball example, let A be the event "Y is blue." Pr(A) is equal to the sum of the probabilities of two different outcomes: Pr(X=blue and Y=blue)+Pr(X=red and Y=blue), or  3/10+1/10=2/5
+- Given: Three positive integers k, m, and n, representing a population containing k+m+n organisms: k individuals are homozygous dominant for a factor, m are heterozygous, and n are homozygous recessive.
+- Return: The probability that two randomly selected mating organisms will produce an individual possessing a dominant allele (and thus displaying the dominant phenotype). Assume that any two organisms can mate
+- Sample
+  - Input: 2 2 2
+  - Output: 0.78333
+- Considering simulating inheritance on a number of small test cases in order to check the solution
+- Follow best practices established, such as using ADTs and functional programming
+6. Rabbits and Recurrence Relations
+- Problem: A sequence is an ordered collection of objects (usually numbers), which are allowed to repeat. Sequences can be finite or infinite. Two examples are the finite sequence (π,−2‾√,0,π) and the infinite sequence of odd numbers (1,3,5,7,9,…). We use the notation a<sub>n</sub> to represent the n-th term of a sequence. A recurrence relation is a way of defining the terms of a sequence with respect to the values of previous terms. In the case of Fibonacci's rabbits from the introduction, any given month will contain the rabbits that were alive the previous month, plus any new offspring. A key observation is that the number of offspring in any month is equal to the number of rabbits that were alive two months prior. As a result, if F<sub>n</sub> represents the number of rabbit pairs alive after the n-th month, then we obtain the Fibonacci sequence having terms F<sub>n</sub> that are defined by the recurrence relation F<sub>n</sub>=F<sub>n−1</sub>+F<sub>n−2</sub> (with F<sub>1</sub>=F<sub>2</sub>=1 to initiate the sequence). Although the sequence bears Fibonacci's name, it was known to Indian mathematicians over two millennia ago. When finding the n-th term of a sequence defined by a recurrence relation, we can simply use the recurrence relation to generate terms for progressively larger values of n. This problem introduces us to the computational technique of dynamic programming, which successively builds up solutions by using the answers to smaller cases.
+- Given: Positive integers n≤40 and k≤5.
+- Return:  The total number of rabbit pairs that will be present after n months, if we begin with 1 pair and in each generation, every pair of reproduction-age rabbits produces a litter of k rabbit pairs (instead of only 1 pair).
+- Sample
+  - Input: 5 3
+  - Output: 19
+7. Identifying Unkwown DNA Quickly
+- Problem: The GC-content of a DNA string is given by the percentage of symbols in the string that are 'C' or 'G'. For example, the GC-content of "AGCTATAG" is 37.5%. Note that the reverse complement of any DNA string has the same GC-content. DNA strings must be labeled when they are consolidated into a database. A commonly used method of string labeling is called FASTA format. In this format, the string is introduced by a line that begins with '>', followed by some labeling information. Subsequent lines contain the string itself; the first line to begin with '>' indicates the label of the next string. n Rosalind's implementation, a string in FASTA format will be labeled by the ID "Rosalind_xxxx", where "xxxx" denotes a four-digit code between 0000 and 9999.
+- Given: At most 10 DNA strings in FASTA format (of length at most 1 kbp each). (kbp = kilobasepair)
+- Return: The ID of the string having the highest GC-content, followed by the GC-content of that string. Rosalind allows for a default error of 0.001 in all decimal answers unless otherwise stated; please see the note on absolute error below.
+- Sample:
+  - Input
+  >Rosalind_6404
+  CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCCTCCCACTAATAATTCTGAGG
+  >Rosalind_5959
+  CCATCGGTAGCGCATCCTTAGTCCAATTAAGTCCCTATCCAGGCGCTCCGCCGAAGGTCTATATCCATTTGTCAGCAGACACGC
+  >Rosalind_0808 
+  CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT
+  - Rosalind_0808
+    60.919540
+- Note on Absolute Error
+  - We say that a number x is within an absolute error of y to a correct solution if x is within y of the correct solution. For example, if an exact solution is 6.157892, then for x to be within an absolute error of 0.001, we must have that |x−6.157892|<0.001 , or 6.156892<x<6.158892. rror bounding is a vital practical tool because of the inherent round-off error in representing decimals in a computer, where only a finite number of decimal places are allotted to any number. After being compounded over a number of operations, this round-off error can become evident. As a result, rather than testing whether two numbers are equal with x=z, you may wish to simply verify that |x−z| is very small. The mathematical field of numerical analysis is devoted to rigorously studying the nature of computational approximation.
+8. Translating RNA Into Protein
+- Problem: The 20 commonly occurring amino acids are abbreviated by using 20 letters from the English alphabet (all letters except for B, J, O, U, X, and Z). Protein strings are constructed from these 20 symbols. Henceforth, the term genetic string will incorporate protein strings along with DNA strings and RNA strings. The RNA codon table dictates the details regarding the encoding of specific codons into the amino acid alphabet.
+- Given: An RNA string s corresponding to a strand of mRNA (of length at most 10 kbp).
+- Return: The protein string encoded by s.
+- RNA Codon Table
+
+| RNA Codon | Amino Acid |
+|------|------------|
+| UUU  | F          |
+| CUU  | L          |
+| AUU | I          |
+|GUU| V          |
+|UUC| F          |      
+|CUC| L          |
+|AUC| I          |
+|GUC| V          |
+|UUA| L          |
+|CUA| L          |
+|AUA| I          |
+|GUA| V          |
+|UUG| L          |
+|CUG| L          |
+|AUG| M          |
+|GUG| V          |
+|UCU| S          |
+|CCU| P          |
+|ACU| T          |
+|GCU| A          |
+|UCC| S          |
+|CCC| P          |
+|ACC| T          |
+|GCC| A          |
+|UCA| S          |
+|CCA| P          |
+|ACA| T          |
+|GCA| A          |
+|UCG| S          |
+|CCG| P          |
+|ACG| T          |
+|GCG| A          |
+|UAU| Y          |
+|CAU| H          |
+|AAU| N          |
+|GAU| D          |
+|UAC| Y          |
+|CAC| H          |
+|AAC| N          |
+|GAC| D          |
+|UAA| Stop       |
+|CAA| Q          |
+|AAA| K          |
+|GAA| E          |
+|UAG| Stop       |
+|CAG| Q          |
+|AAG| K          |
+|GAG| E          |
+|UGU| C          |
+|CGU| R          |
+|AGU| S          |
+|GGU| G          |
+|UGC|C|
+|CGC|R|
+|AGC|S|
+|GGC|G|
+|UGA|Stop|
+|CGA|R|
+|AGA|R|
+|GGA|G|
+|UGG|W|
+|CGG|R|
+|AGG|R|
+|GGG|G|
+- Sample Dataset
+  - Input: AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
+  - Output: MAMAPRTEINSTRING
+- Additional Info: https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables
+
+9. Finding a Motif in DNA
+- Problem: Given two strings s and t, t is a substring of s if t is contained as a contiguous collection of symbols in s (as a result, t must be no longer than s). The position of a symbol in a string is the total number of symbols found to its left, including itself (e.g., the positions of all occurrences of 'U' in "AUGCUUCAGAAAGGUCUUACG" are 2, 5, 6, 15, 17, and 18). The symbol at position i of s is denoted by s[i]. A substring of s can be represented as s[j:k], where j and k represent the starting and ending positions of the substring in s ; for example, if s = "AUGCUUCAGAAAGGUCUUACG", then s[2:5] = "UGCU". The location of a substring s[j:k] is its beginning position j; note that t will have multiple locations in s if it occurs more than once as a substring of s (see the Sample below).
+- Given: Two DNA strings s and t (each of length at most 1 kbp).
+- Return: All locations of t as a substring of s.
+- Sample Dataset
+  - Input:
+    GATATATGCATATACTT
+    ATAT
+  - Output: 2 4 10
+
+10. Counting Point Mutations
+- Problem: Given two strings s and t of equal length, the Hamming distance between s and t, denoted d<sub>H</sub>(s,t), is the number of corresponding symbols that differ in s and t.
+- Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
+- Return: The Hamming distance d<sub>H</sub>(s,t)
+- Sample Dataset
+  - Input:
+    GAGCCTACTAACGGGAT
+    CATCGTAATGACGGCCT
+  - Output: 7
+
+11. Calculating Expected Offspring
+- Problem: For a random variable X taking integer values between 1 and n, the expected value of X is E(X)=∑<sup>n</sup><sub>k</sub>=1k×Pr(X=k). The expected value offers us a way of taking the long-term average of a random variable over a large number of trials. As a motivating example, let X be the number on a six-sided die. Over a large number of rolls, we should expect to obtain an average of 3.5 on the die (even though it's not possible to roll a 3.5). The formula for expected value confirms that E(X)=∑<sup>6</sup><sub>k=1</sub>k × Pr(X=k)=3.5 . More generally, a random variable for which every one of a number of equally spaced outcomes has the same probability is called a uniform random variable (in the die example, this "equal spacing" is equal to 1). We can generalize our die example to find that if X is a uniform random variable with minimum possible value a and maximum possible value b, then E(X)=(a+b)/2 . You may also wish to verify that for the dice example, if Y is the random variable associated with the outcome of a second die roll, then E(X+Y)=7.
+- Given: Six nonnegative integers, each of which does not exceed 20,000. The integers correspond to the number of couples in a population possessing each genotype pairing for a given factor. In order, the six given integers represent the number of couples having the following genotypes:
+  1. AA-AA
+  2. AA-Aa
+  3. AA-aa
+  4. Aa-Aa
+  5. Aa-aa
+  6. aa-aa
+- Return: The expected number of offspring displaying the dominant phenotype in the next generation, under the assumption that every couple has exactly two offspring.
+- Sample Dataset
+  - Input: 1 0 0 1 0 1
+  - Output: 3.5
+
+12. Mortal Fibonacci Rabbits
+- Problem: Recall the definition of the Fibonacci numbers from “Rabbits and Recurrence Relations”, which followed the recurrence relation F<sub>n</sub>=F<sub>n−1</sub>+F<sub>n−2<.sub> and assumed that each pair of rabbits reaches maturity in one month and produces a single pair of offspring (one male, one female) each subsequent month. Our aim is to somehow modify this recurrence relation to achieve a dynamic programming solution in the case that all rabbits die out after a fixed number of months.
+- Given: Positive integers n≤100 and m≤20.
+- Return: The total number of pairs of rabbits that will remain after the n-th month if all rabbits live for m months.
+- Sample Data
+  - Input: 6 3
+  - Output: 4
+
+13. Inferring mRNA from Protein
+- Problem: For positive integers a and n, a modulo n (written a mod n in shorthand) is the remainder when a is divided by n. For example, 29mod11=7 because 29=11×2+7. Modular arithmetic is the study of addition, subtraction, multiplication, and division with respect to the modulo operation. We say that a and b are congruent modulo n if a mod n = b mod n; in this case, we use the notation a ≡ b mod n. Two useful facts in modular arithmetic are that if a ≡ b mod n and c ≡ d mod n, then a+c ≡ b+d mod n and a×c ≡ b×d mod n. To check your understanding of these rules, you may wish to verify these relationships for a=29, b=73, c=10, d=32, and n=11. As you will see in this exercise, some Rosalind problems will ask for a (very large) integer solution modulo a smaller number to avoid the computational pitfalls that arise with storing such large numbers.
+- Given: A protein string of length at most 1000 aa. (aa = amino acid)
+- Return: The total number of different RNA strings from which the protein could have been translated, modulo 1,000,000. (Don't neglect the importance of the stop codon in protein translation.)
+- Sample Dataset
+  - Input: MA
+  - Output: 12
+- Hint: What does it mean intuitively to take a number modulo 1,000,000?
+
+
+
+
+Constraints / non-goals:
+- No auth/roles (for now)
+- This is a framework, so no UI
+- Provide Given/When/Then acceptance criteria with at least 2 edge cases per feature.
+- Use SBT for building the project.
+- Use the IO Monad for side effects
+- Functional Programming highly desired over imperative style
+- Scala Best practices encouraged
+- Usage of ADTs for Domain types are a must 
+

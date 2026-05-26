@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(openspec new *)",
+      "Bash(java -version)",
+      "Read(//usr/local/bin/**)",
+      "Bash(find /usr/local /opt/homebrew /Users/cference -name \"sbt\" -type f 2>/dev/null | head -5; echo \"PATH: $PATH\")",
+      "Bash(brew list *)",
+      "Bash(brew install *)",
+      "Bash(openspec status *)",
+      "Bash(openspec instructions *)",
+      "Bash(/usr/local/bin/sbt test *)",
+      "Bash(/usr/local/bin/sbt compile *)",
+      "Bash(openspec list *)",
+      "Bash(openspec change *)",
+      "Bash(openspec spec *)",
+      "Bash(openspec validate *)",
+      "Bash(mkdir -p /Users/cference/Code/scala-bioinformatics/.claude/skills/scala-bio-framework)",
+      "Bash(sbt --error 'set Test/logBuffered := false; testOnly bio.domain.FastaRecordSpec')",
+      "Bash(sbt --error 'testOnly bio.parsing.FastaParserSpec bio.domain.FastaRecordSpec')",
+      "Bash(sbt 'testOnly bio.parsing.FastaParserSpec bio.domain.FastaRecordSpec')",
+      "Bash(sbt compile *)",
+      "Bash(sbt 'testOnly bio.domain.GcContentSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.HighestGcSpec')",
+      "Bash(sbt clean *)",
+      "Bash(sbt test *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('INSTRUCTION:', d['instruction']\\); print\\('---'\\); print\\('TEMPLATE:', d['template']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('INSTRUCTION:', d['instruction']\\); print\\('---'\\); print\\('TEMPLATE:', d.get\\('template','\\(none\\)'\\)\\)\")",
+      "Bash(sbt 'testOnly bio.domain.AminoAcidSpec')",
+      "Bash(sbt 'testOnly bio.domain.CodonSpec bio.domain.CodonOutcomeSpec')",
+      "Bash(sbt 'testOnly bio.domain.GeneticCodeSpec')",
+      "Bash(sbt 'testOnly bio.domain.ProteinStringSpec')",
+      "Bash(sbt 'testOnly bio.domain.RnaStringSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.RnaTranslationSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.analysis.MotifLocationsSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.analysis.HammingDistanceSpec')",
+      "Bash(sbt 'testOnly bio.domain.genetics.CouplePopulationSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.genetics.ExpectedOffspringSpec')",
+      "Bash(sbt 'testOnly bio.domain.recurrence.MortalRabbitProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.recurrence.MortalFibonacciRabbitsSpec')"
+    ]
+  }
+}
