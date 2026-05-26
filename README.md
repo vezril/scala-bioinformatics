@@ -2,6 +2,8 @@
 
 A framework for solving bioinformatics problems in Scala, built with functional programming principles using Cats Effect.
 
+This project has the goal of solving [Project Rosalind](https://rosalind.info/problems/tree-view/) problems using Claude AI for exploratory and learning.
+
 ## Prerequisites
 
 - JDK 11 or higher
