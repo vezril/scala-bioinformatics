@@ -370,6 +370,13 @@ Features (minimal, more features to be added later, this is just to get started)
   - Input: 0.1 0.25 0.5
   - Output: 0.532 0.75 0.914
 
+26. The Wright-Fisher Model of Genetic Drift
+- Problem: Consider flipping a weighted coin that gives "heads" with some fixed probability p (i.e., p is not necessarily equal to 1/2). We generalize the notion of binomial random variable from “Independent Segregation of Chromosomes” to quantify the sum of the weighted coin flips. Such a random variable X takes a value of k if a sequence of n independent "weighted coin flips" yields k "heads" and n−k "tails." We write that X ∈ Bin(n,p). To quantify the Wright-Fisher Model of genetic drift, consider a population of N diploid individuals, whose 2N chromosomes possess m copies of the dominant allele. As in “Counting Disease Carriers”, set p=m/(2N). Next, recall that the next generation must contain exactly N individuals. These individuals' 2N alleles are selected independently: a dominant allele is chosen with probability p, and a recessive allele is chosen with probability 1−p.
+- Given: Positive integers N ( N≤ 7), m (m ≤ 2N), g (g ≤ 6) and k (k ≤ 2N).
+- Return: The probability that in a population of N diploid individuals initially possessing m copies of a dominant allele, we will observe after g generations at least k copies of a recessive allele. Assume the Wright-Fisher model.
+- Sample Dataset
+  - Input: 4 6 2 1
+  - Output: 0.772
 
 Constraints / non-goals:
 - No auth/roles (for now)

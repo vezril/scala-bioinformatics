@@ -83,7 +83,11 @@
       "Bash(sbt \"testOnly bio.algorithms.genetics.IndependentSegregationSpec\")",
       "Bash(grep \"^independent-chromosome-segregation$\")",
       "Bash(sbt \"testOnly bio.algorithms.genetics.DiseaseCarriersSpec\")",
-      "Bash(grep \"^disease-carrier-frequencies$\")"
+      "Bash(grep \"^disease-carrier-frequencies$\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.genetics.WrightFisherSpec\")",
+      "Bash(grep \"^wright-fisher-genetic-drift$\")"
     ]
   }
 }

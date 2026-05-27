@@ -17,7 +17,8 @@ object Main extends IOApp {
     //val result = SSETProb.solve()
     //val result = ASPCProb.solve()
     //val result = INDCProb.solve()
-    val result = AFRQProb.solve()
+    //val result = AFRQProb.solve()
+    val result = WFMDProb.solve()
 
     result.as(ExitCode.Success)
   }
