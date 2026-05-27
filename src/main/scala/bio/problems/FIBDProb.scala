@@ -4,7 +4,7 @@ import bio.algorithms.recurrence.MortalFibonacciRabbits
 import bio.domain.recurrence.MortalRabbitProblem
 import cats.effect.IO
 
-object MortalFibonacciProblem {
+object FIBDProb {
 
   // https://rosalind.info/problems/fibd/
   def solve(): IO[Unit] = {

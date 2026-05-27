@@ -9,7 +9,7 @@ import java.nio.file.Path
 import scala.concurrent.ExecutionContext
 import cats.effect.unsafe.implicits.{global => ioRuntime}
 
-object OverlapGraphsProblem {
+object GRPHProb {
 
   def solve(): IO[Unit] = {
 

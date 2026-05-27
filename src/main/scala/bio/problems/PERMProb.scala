@@ -4,7 +4,7 @@ import bio.algorithms.combinatorics.Permutations
 import bio.domain.combinatorics.PermutationLength
 import cats.effect.IO
 
-object EnumGenesProblem {
+object PERMProb {
 
   def solve(): IO[Unit] = {
 

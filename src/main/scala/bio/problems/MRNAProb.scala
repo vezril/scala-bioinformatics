@@ -4,7 +4,7 @@ import bio.algorithms.protein.InferMRna
 import bio.domain.protein.ProteinString
 import cats.effect.IO
 
-object InferringmRNAFromProteinProblem {
+object MRNAProb {
 
   def solve(): IO[Unit] = {
 

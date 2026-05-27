@@ -50,7 +50,12 @@
       "Bash(sbt \"testOnly bio.algorithms.analysis.OverlapGraphSpec\")",
       "Bash(sbt \"testOnly bio.parsing.FastaErrorSpec\")",
       "Bash(sbt \"testOnly bio.parsing.FastaFileReaderSpec\")",
-      "Bash(grep -E \"^\\(overlap-graphs|fasta-file-reading\\)$\")"
+      "Bash(grep -E \"^\\(overlap-graphs|fasta-file-reading\\)$\")",
+      "Bash(sbt \"testOnly bio.domain.matrix.ConsensusProfileProblem* bio.domain.matrix.ConsensusProfileProblemError*\")",
+      "Bash(sbt \"testOnly bio.domain.matrix.ProfileMatrix* bio.domain.matrix.ProfileMatrixError*\")",
+      "Bash(sbt \"testOnly bio.domain.matrix.ConsensusProfileResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.matrix.ConsensusProfileSpec\")",
+      "Bash(grep \"^consensus-and-profile$\")"
     ]
   }
 }

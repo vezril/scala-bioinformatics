@@ -4,7 +4,7 @@ import bio.algorithms.combinatorics.PartialPermutations
 import bio.domain.combinatorics.PartialPermutationProblem
 import cats.effect.IO
 
-object PartialPermProblem {
+object PPERProb {
 
   def solve(): IO[Unit] = {
 

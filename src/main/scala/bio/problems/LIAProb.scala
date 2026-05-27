@@ -4,7 +4,7 @@ import bio.algorithms.genetics.IndependentAlleles
 import bio.domain.genetics.IndependentAllelesProblem
 import cats.effect.IO
 
-object IndAllelesProblem {
+object LIAProb {
 
   def solve(): IO[Unit] = {
 
