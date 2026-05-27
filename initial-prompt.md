@@ -322,7 +322,19 @@ Features (minimal, more features to be added later, this is just to get started)
     3
 - Extra info: After solving this problem, a standard mathematical exercise for the technically minded is to verify that every tree having 2 or more nodes must contain at least two leaves.
 
-
+21. RNA Splicing
+- Problem: After identifying the exons and introns of an RNA string, we only need to delete the introns and concatenate the exons to form a new string ready for translation.
+- Given: A DNA string s (of length at most 1 kbp) and a collection of substrings of s acting as introns. All strings are given in FASTA format.
+- Return: A protein string resulting from transcribing and translating the exons of s. (Note: Only one solution will exist for the dataset provided.)
+- Sample Dataset
+  - Input
+  >Rosalind_10
+  ATGGTCTACATAGCTGACAAACAGCACGTAGCAATCGGTCGAATCTCGAGAGGCATATGGTCACATGATCGGTCGAGCGTGTTTCAAAGTTTGCGCCTAG
+  >Rosalind_12
+  ATCGGTCGAA
+  >Rosalind_15
+  ATCGGTCGAGCGTGT
+  -Ouput: MVYIADKQHVASREAYGHMFKVCA
 
 Constraints / non-goals:
 - No auth/roles (for now)

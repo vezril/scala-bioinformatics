@@ -65,7 +65,10 @@
       "Bash(sbt \"testOnly bio.domain.graph.TreeCompletionProblem* bio.domain.graph.TreeCompletionProblemError*\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.TreeCompletionSpec\")",
       "Bash(sbt \"testOnly bio.parsing.TreeAdjacencyFileReaderSpec\")",
-      "Bash(grep -E \"^\\(tree-completion|overlap-graphs\\)$\")"
+      "Bash(grep -E \"^\\(tree-completion|overlap-graphs\\)$\")",
+      "Bash(sbt \"testOnly bio.algorithms.nucleic.IntronSplicingSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.RnaSplicingSpec\")",
+      "Bash(grep \"^rna-splicing$\")"
     ]
   }
 }
