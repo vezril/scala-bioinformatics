@@ -44,7 +44,13 @@
       "Bash(sbt 'testOnly bio.domain.combinatorics.PermutationLengthSpec')",
       "Bash(sbt 'testOnly bio.algorithms.combinatorics.PermutationsSpec')",
       "Bash(sbt 'testOnly bio.domain.combinatorics.PartialPermutationProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.combinatorics.PartialPermutationsSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.combinatorics.PartialPermutationsSpec')",
+      "Bash(sbt \"testOnly bio.domain.analysis.OverlapLength* bio.domain.analysis.OverlapLengthError*\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.OverlapEdgeSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.OverlapGraphSpec\")",
+      "Bash(sbt \"testOnly bio.parsing.FastaErrorSpec\")",
+      "Bash(sbt \"testOnly bio.parsing.FastaFileReaderSpec\")",
+      "Bash(grep -E \"^\\(overlap-graphs|fasta-file-reading\\)$\")"
     ]
   }
 }

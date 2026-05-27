@@ -1,6 +1,6 @@
 package bio
 
-import bio.problems.{EnumGenesProblem, IndAllelesProblem, InferringmRNAFromProteinProblem, MortalFibonacciProblem, PartialPermProblem}
+import bio.problems.{EnumGenesProblem, IndAllelesProblem, InferringmRNAFromProteinProblem, MortalFibonacciProblem, OverlapGraphsProblem, PartialPermProblem}
 import cats.effect.{ExitCode, IO, IOApp}
 
 object Main extends IOApp {
@@ -8,7 +8,8 @@ object Main extends IOApp {
 
     //val result = IndAllelesProblem.solve()
     //val result = EnumGenesProblem.solve()
-    val result = PartialPermProblem.solve()
+    //val result = PartialPermProblem.solve()
+    val result = OverlapGraphsProblem.solve()
 
     result.as(ExitCode.Success)
   }

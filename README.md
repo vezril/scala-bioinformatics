@@ -82,3 +82,6 @@ Output format: four space-separated integers in A C G T order.
 - **ADTs for domain types**: Invalid states are unrepresentable — `DnaString` can only be constructed via its smart constructor.
 - **Pure function core**: `DnaNucleotides.count` is a pure function; `IO` is used only at the application boundary.
 - **TDD**: Every behavior has a failing test before any implementation.
+
+## License
+No License - I do not own this code as I did not write it, an AI Agent did (Claude Code) besides a few things here and there. Do whatever you want with this. All specs were generated with OpenSpec, and are fully documented with the skill for the Agent.
