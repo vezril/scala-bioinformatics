@@ -1,6 +1,6 @@
 package bio.algorithms.genetics
 
-import bio.domain.genetics.WrightFisherProblem
+import bio.domain.genetics.{WrightFisherExpectationProblem, WrightFisherProblem}
 import bio.domain.stats.Probability
 
 /** Wright-Fisher genetic-drift tail probability (Rosalind WFMD).
@@ -65,6 +65,29 @@ object WrightFisher {
 
     Probability.unsafeFrom(tail)
   }
+
+  /** Expected value of `Bin(n, p)` for each `p` in the input vector (Rosalind EBIN).
+    *
+    * Returns a `Vector[Double]` of the same length as `problem.p` where each element
+    * is `problem.n.toDouble * prob.value` for the corresponding probability — the
+    * textbook identity `E[Bin(n, p)] = n · p`.
+    *
+    * **Output type:** bare `Vector[Double]` rather than `Vector[Probability]`. The
+    * expected count is a *count*, not a probability — it can exceed 1 (the Rosalind
+    * sample's `5.1` does). Mirrors the bare-`Vector[Double]` output choices in
+    * [[bio.algorithms.analysis.RandomMatch.logProbabilities]] and
+    * [[IndependentSegregation.logProbs]].
+    *
+    * **Shares the `WrightFisher` object** with [[atLeast]] but no state — the two
+    * methods are independently usable and each takes its own validated input bundle
+    * ([[WrightFisherProblem]] for `atLeast`, [[WrightFisherExpectationProblem]]
+    * here). The compiler routes calls correctly by type.
+    *
+    * **Complexity:** `O(m)` floating-point multiplications where `m = problem.p.size`.
+    * At `m ≤ 20` this is microseconds per call.
+    */
+  def expectedFrequencies(problem: WrightFisherExpectationProblem): Vector[Double] =
+    problem.p.map(prob => problem.n.toDouble * prob.value)
 
   /** Binomial PMF row of length `n + 1` at success probability `p`, computed via the
     * multiplicative recurrence. Special-cases the absorbing extremes:
