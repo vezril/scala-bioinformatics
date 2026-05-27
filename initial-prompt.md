@@ -206,6 +206,20 @@ Features (minimal, more features to be added later, this is just to get started)
   - Output: 0.684
 - Mendels Second Law: Recall that Mendel's first law states that for any factor, an individual randomly assigns one of its two alleles to its offspring. Yet this law does not state anything regarding the relationship with which alleles for different factors will be inherited. After recording the results of crossing thousands of pea plants for seven years, Mendel surmised that alleles for different factors are inherited with no dependence on each other. This statement has become his second law, also known as the law of independent assortment. What does it mean for factors to be "assorted independently?" If we cross two organisms, then a shortened form of independent assortment states that if we look only at organisms having the same alleles for one factor, then the inheritance of another factor should not change. For example, Mendel's first law states that if we cross two Aa organisms, then 1/4 of their offspring will be aa, 1/4 will be AA, and 1/2 will be Aa. Now, say that we cross plants that are both heterozygous for two factors, so that both of their genotypes may be written as Aa Bb. Next, examine only Bb offspring: Mendel's second law states that the same proportions of AA, Aa, and aa individuals will be observed in these offspring. The same fact holds for BB and bb offspring. As a result, independence will allow us to say that the probability of an aa BB offspring is simply equal to the probability of an aa offspring times the probability of a BB organism, i.e., 1/16. Because of independence, we can also extend the idea of Punnett squares to multiple factors, as shown in Figure 1. We now wish to quantify Mendel's notion of independence using probability.
 
+15. Enumerating Gene Orders
+- Problem: A permutation of length n is an ordering of the positive integers {1,2,…,n}. For example, π=(5,3,2,1,4) is a permutation of length 5.
+- Given: A positive integer n≤7.
+- Return: The total number of permutations of length n, followed by a list of all such permutations (in any order).
+- Sample Dataset
+  - Input: 3
+  - Output
+    6
+    1 2 3
+    1 3 2
+    2 1 3
+    2 3 1
+    3 1 2
+    3 2 1
 
 Constraints / non-goals:
 - No auth/roles (for now)

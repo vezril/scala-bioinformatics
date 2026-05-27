@@ -40,7 +40,9 @@
       "Bash(sbt 'testOnly bio.algorithms.recurrence.MortalFibonacciRabbitsSpec')",
       "Bash(sbt 'testOnly bio.algorithms.protein.InferMRnaSpec')",
       "Bash(sbt 'testOnly bio.domain.genetics.IndependentAllelesProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.genetics.IndependentAllelesSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.genetics.IndependentAllelesSpec')",
+      "Bash(sbt 'testOnly bio.domain.combinatorics.PermutationLengthSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.combinatorics.PermutationsSpec')"
     ]
   }
 }
