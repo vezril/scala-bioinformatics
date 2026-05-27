@@ -345,6 +345,15 @@ Features (minimal, more features to be added later, this is just to get started)
   - Output: 8
 - Hint: What does counting subsets have to do with characters and "ON"/"OFF" switches?
 
+23. Introduction to Alternative Splicing
+- Problem: In “Counting Subsets”, we saw that the total number of subsets of a set S containing n elements is equal to 2n. However, if we intend to count the total number of subsets of S having a fixed size k, then we use the combination statistic C(n,k), also written (<sup>n</sup><sub>k</sub>).
+- Given: Positive integers n and m with 0 ≤ m ≤ n ≤ 2000.
+- Return: The sum of combinations C(n,k) for all k satisfying m ≤ k ≤ n, modulo 1,000,000. In shorthand, ∑<sup>n</sup><sub>k</sub>=m(<sup>n</sup><sub>k</sub>).
+- Sample Dataset:
+  - Input: 6 3
+  - Output: 42
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

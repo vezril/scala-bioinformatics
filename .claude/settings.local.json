@@ -73,7 +73,11 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.SubsetUniverseSizeErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.SubsetUniverseSizeSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.SubsetsSpec\")",
-      "Bash(grep \"^counting-subsets$\")"
+      "Bash(grep \"^counting-subsets$\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.CombinationSumProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.CombinationSumProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.CombinationsSpec\")",
+      "Bash(grep \"^alternative-splicing-counting$\")"
     ]
   }
 }
