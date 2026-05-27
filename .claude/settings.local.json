@@ -81,7 +81,9 @@
       "Bash(sbt \"testOnly bio.domain.genetics.ChromosomePairsErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.genetics.ChromosomePairsSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.genetics.IndependentSegregationSpec\")",
-      "Bash(grep \"^independent-chromosome-segregation$\")"
+      "Bash(grep \"^independent-chromosome-segregation$\")",
+      "Bash(sbt \"testOnly bio.algorithms.genetics.DiseaseCarriersSpec\")",
+      "Bash(grep \"^disease-carrier-frequencies$\")"
     ]
   }
 }
