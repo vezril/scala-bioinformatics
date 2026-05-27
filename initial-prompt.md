@@ -389,6 +389,17 @@ Features (minimal, more features to be added later, this is just to get started)
   - Output:
     1.7 3.4 5.1
 
+28. The Founder Effect and Genetic Drift
+- Given: Two positive integers N and m, followed by an array A containing k integers between 0 and 2N. A[j] represents the number of recessive alleles for the j-th factor in a population of N diploid individuals.
+- Return: An m×k matrix B for which B<sub>i,j</sub> represents the common logarithm of the probability that after i generations, no copies of the recessive allele for the j-th factor will remain in the population. Apply the Wright-Fisher model.
+- Sample Dataset:
+  - Input
+    4 3
+    0 1 2
+  - Output:
+    0.0 -0.463935575821 -0.999509892866
+    0.0 -0.301424998891 -0.641668367342
+    0.0 -0.229066698008 -0.485798552456
 
 Constraints / non-goals:
 - No auth/roles (for now)

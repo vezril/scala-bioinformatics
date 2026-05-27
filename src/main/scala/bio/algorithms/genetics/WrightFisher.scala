@@ -1,6 +1,10 @@
 package bio.algorithms.genetics
 
-import bio.domain.genetics.{WrightFisherExpectationProblem, WrightFisherProblem}
+import bio.domain.genetics.{
+  WrightFisherExpectationProblem,
+  WrightFisherFixationProblem,
+  WrightFisherProblem
+}
 import bio.domain.stats.Probability
 
 /** Wright-Fisher genetic-drift tail probability (Rosalind WFMD).
@@ -88,6 +92,71 @@ object WrightFisher {
     */
   def expectedFrequencies(problem: WrightFisherExpectationProblem): Vector[Double] =
     problem.p.map(prob => problem.n.toDouble * prob.value)
+
+  /** Per-generation per-factor `log10` fixation probabilities under the Wright-Fisher
+    * model (Rosalind FOUN).
+    *
+    * For each recessive-allele count `a = problem.recessiveCounts(j)` (interpreted as
+    * the initial recessive count for factor `j`, so the initial dominant count is
+    * `2n − a`), simulates `problem.m` Wright-Fisher generations and records, at each
+    * generation `g ∈ 1..m`, `log10(P(state = 2n))` — the probability of the all-
+    * dominant absorbing state. The result is an `m × k` matrix:
+    *
+    *   - outer Vector indexed `0..m-1` corresponds to generations `1..m`.
+    *   - inner Vector indexed `0..k-1` corresponds to factors `0..k-1`.
+    *
+    * **Algorithm:** build the WF transition matrix once via [[binomialPmf]] (shared
+    * with [[atLeast]]). For each factor, walk a one-hot distribution forward `m`
+    * generations recording `Math.log10(dist(2n))` at each step. Then transpose the
+    * factor-first layout into the spec-required generation-first matrix.
+    *
+    * **Absorbing-state behavior:**
+    *   - `recessiveCounts(j) = 0` (initial state = 2n, all dominant): result is
+    *     `0.0` at every generation (population starts fixed; remains fixed forever).
+    *   - `recessiveCounts(j) = 2n` (initial state = 0, all recessive): the all-
+    *     recessive state is absorbing, so `dist(2n)` stays at `0.0` forever and the
+    *     result is `Double.NegativeInfinity` at every generation.
+    *
+    * **Complexity:** `O(m · k · (2n+1)²)` floating-point operations per call. At the
+    * upper bounds (n=100, m=100, k=100) this is on the order of `4 × 10⁹` ops; in
+    * practice Rosalind inputs are far smaller and the algorithm runs in milliseconds.
+    *
+    * **Shares the `WrightFisher` object** with [[atLeast]] (spec 26 — WFMD) and
+    * [[expectedFrequencies]] (spec 27 — EBIN) but no state. Each method takes its
+    * own validated input bundle ([[WrightFisherProblem]], [[WrightFisherExpectationProblem]],
+    * [[WrightFisherFixationProblem]]); the compiler routes calls by type.
+    */
+  def fixationLogProbs(problem: WrightFisherFixationProblem): Vector[Vector[Double]] = {
+    val twoN   = 2 * problem.n
+    val states = twoN + 1
+
+    // Build the transition matrix once. T(i)(j) = P(j dominant next gen | i dominant).
+    val transition: Vector[Vector[Double]] =
+      (0 to twoN).toVector.map(i => binomialPmf(twoN, i.toDouble / twoN.toDouble))
+
+    // For each factor, walk forward m generations and collect log10(dist(2n)) per step.
+    // Result here is k × m (per-factor rows of length m).
+    val perFactorTimeline: Vector[Vector[Double]] =
+      problem.recessiveCounts.map { a =>
+        val initial: Vector[Double] =
+          Vector.tabulate(states)(idx => if (idx == twoN - a) 1.0 else 0.0)
+        val (_, logs) = (1 to problem.m).foldLeft((initial, Vector.empty[Double])) {
+          case ((dist, acc), _) =>
+            val newDist = Vector.tabulate(states) { j =>
+              (0 until states).iterator.map(i => dist(i) * transition(i)(j)).sum
+            }
+            (newDist, acc :+ Math.log10(newDist(twoN)))
+        }
+        logs
+      }
+
+    // Transpose from k × m to m × k as required by the spec.
+    Vector.tabulate(problem.m) { g =>
+      Vector.tabulate(problem.recessiveCounts.size) { j =>
+        perFactorTimeline(j)(g)
+      }
+    }
+  }
 
   /** Binomial PMF row of length `n + 1` at success probability `p`, computed via the
     * multiplicative recurrence. Special-cases the absorbing extremes:

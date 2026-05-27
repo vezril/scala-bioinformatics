@@ -91,7 +91,11 @@
       "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherExpectationProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherExpectationProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.genetics.WrightFisherExpectationSpec bio.algorithms.genetics.WrightFisherSpec\")",
-      "Bash(grep \"^wright-fisher-expectation$\")"
+      "Bash(grep \"^wright-fisher-expectation$\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherFixationProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherFixationProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.genetics.WrightFisherFixationSpec bio.algorithms.genetics.WrightFisherSpec bio.algorithms.genetics.WrightFisherExpectationSpec\")",
+      "Bash(grep \"^founder-effect-genetic-drift$\")"
     ]
   }
 }
