@@ -409,6 +409,19 @@ Features (minimal, more features to be added later, this is just to get started)
   - Input: 4
   - Sample Output: 2
 
+30. Distances in Trees
+- Problem: Newick format is a way of representing trees even more concisely than using an adjacency list, especially when dealing with trees whose internal nodes have not been labeled. First, consider the case of a rooted tree T. A collection of leaves v<sub>1</sub>,v<sub>2</sub>,…,v<sub>n</sub> of T are neighbors if they are all adjacent to some internal node u. Newick format for T is obtained by iterating the following key step: delete all the edges {v<sub>i</sub>,u} from T and label u with (v<sub>1</sub>,v<sub>2</sub>,…,v<sub>n</sub>)u. This process is repeated all the way to the root, at which point a semicolon signals the end of the tree. A number of variations of Newick format exist. First, if a node is not labeled in T, then we simply leave blank the space occupied by the node. In the key step, we can write (v<sub>1</sub>,v<sub>2</sub>,…,v<sub>n</sub>) in place of (v<sub>1</sub>,v<sub>2</sub>,…,v<sub>n<.sub>)u if the v<sub>i</sub> are labeled; if none of the nodes are labeled, we can write (,,…,). A second variation of Newick format occurs when T is unrooted, in which case we simply select any internal node to serve as the root of T. A particularly peculiar case of Newick format arises when we choose a leaf to serve as the root. Note that there will be a large number of different ways to represent T in Newick format;
+- Given: A collection of n trees (n ≤ 40) in Newick format, with each tree containing at most 200 nodes; each tree T<sub>k</sub> is followed by a pair of nodes x<sub>k</sub> and y<sub>k</sub> in T<sub>k</sub>.
+- Return: A collection of n positive integers, for which the k th integer represents the distance between x<sub>k</sub> and y<sub>k</sub> in T<sub>k</sub>.
+- Sample Dataset:
+  - Input:
+    (cat)dog;
+    dog cat
+
+    (dog,cat);
+    dog cat
+  - Output: 1 2
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

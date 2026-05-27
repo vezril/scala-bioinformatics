@@ -21,7 +21,8 @@ object Main extends IOApp {
     //val result = WFMDProb.solve()
     //val result = EBINProb.solve()
     //val result = FOUNProb.solve()
-    val result = INODProb.solve()
+    //val result = INODProb.solve()
+    val result = NWCKProb.solve()
 
     result.as(ExitCode.Success)
   }

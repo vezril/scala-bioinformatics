@@ -100,7 +100,12 @@
       "Bash(sbt -warn 'testOnly bio.domain.graph.UnrootedBinaryTreeLeafCountSpec')",
       "Bash(sbt 'testOnly bio.domain.graph.UnrootedBinaryTreeLeafCountSpec')",
       "Bash(sbt 'Test/compile')",
-      "Bash(sbt 'testOnly bio.algorithms.graph.PhylogeneticAncestorsSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.graph.PhylogeneticAncestorsSpec')",
+      "Bash(sbt 'testOnly bio.domain.graph.NewickTreeSpec')",
+      "Bash(sbt 'testOnly bio.parsing.NewickParserSpec')",
+      "Bash(sbt 'testOnly bio.domain.graph.NewickDistanceProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.graph.NewickDistanceSpec')",
+      "Bash(sbt run *)"
     ]
   }
 }
