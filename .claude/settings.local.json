@@ -95,7 +95,12 @@
       "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherFixationProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.genetics.WrightFisherFixationProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.genetics.WrightFisherFixationSpec bio.algorithms.genetics.WrightFisherSpec bio.algorithms.genetics.WrightFisherExpectationSpec\")",
-      "Bash(grep \"^founder-effect-genetic-drift$\")"
+      "Bash(grep \"^founder-effect-genetic-drift$\")",
+      "Bash(sbt -warn 'Test/compile')",
+      "Bash(sbt -warn 'testOnly bio.domain.graph.UnrootedBinaryTreeLeafCountSpec')",
+      "Bash(sbt 'testOnly bio.domain.graph.UnrootedBinaryTreeLeafCountSpec')",
+      "Bash(sbt 'Test/compile')",
+      "Bash(sbt 'testOnly bio.algorithms.graph.PhylogeneticAncestorsSpec')"
     ]
   }
 }
