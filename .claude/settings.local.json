@@ -77,7 +77,11 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.CombinationSumProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.CombinationSumProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.CombinationsSpec\")",
-      "Bash(grep \"^alternative-splicing-counting$\")"
+      "Bash(grep \"^alternative-splicing-counting$\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.ChromosomePairsErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.genetics.ChromosomePairsSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.genetics.IndependentSegregationSpec\")",
+      "Bash(grep \"^independent-chromosome-segregation$\")"
     ]
   }
 }
