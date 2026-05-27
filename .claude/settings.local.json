@@ -55,7 +55,11 @@
       "Bash(sbt \"testOnly bio.domain.matrix.ProfileMatrix* bio.domain.matrix.ProfileMatrixError*\")",
       "Bash(sbt \"testOnly bio.domain.matrix.ConsensusProfileResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.matrix.ConsensusProfileSpec\")",
-      "Bash(grep \"^consensus-and-profile$\")"
+      "Bash(grep \"^consensus-and-profile$\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.RandomMatchProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.RandomMatchProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.RandomMatchSpec\")",
+      "Bash(grep \"^random-string-matching$\")"
     ]
   }
 }
