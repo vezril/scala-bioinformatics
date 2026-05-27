@@ -1,4 +1,4 @@
-package bio.domain.analysis
+package bio.domain.graph
 
 /** The overlap length `k` used to construct an overlap graph `O_k` — the number of
   * characters that must match between a suffix of one sequence and a prefix of another

@@ -1,7 +1,4 @@
-## Purpose
-Define the overlap-graphs capability: the `OverlapLength` validated value type (k ≥ 1) and its error ADT, the `OverlapEdge(from, to)` directed-edge type, and the `OverlapGraph.adjacency(records, k): Vector[OverlapEdge]` algorithm that emits every directed edge `s → t` where the length-`k` suffix of `s.dna` equals the length-`k` prefix of `t.dna` (with `s.id != t.id`, no self-loops). Serves the Rosalind "Overlap Graphs" problem (O_3 over a FASTA collection) and shares the `bio.{domain,algorithms}.graph` subdomain with the tree-completion capability.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: OverlapLengthError is a sealed ADT of OverlapLength construction failures
 The system SHALL provide a `sealed trait OverlapLengthError` with case `final case class NonPositive(value: Int)`. The type SHALL reside in the `bio.domain.graph` package.

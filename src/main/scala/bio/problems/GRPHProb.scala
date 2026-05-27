@@ -1,7 +1,7 @@
 package bio.problems
 
-import bio.algorithms.analysis.OverlapGraph
-import bio.domain.analysis.OverlapLength
+import bio.algorithms.graph.OverlapGraph
+import bio.domain.graph.OverlapLength
 import bio.parsing.FastaFileReader
 import cats.effect.IO
 

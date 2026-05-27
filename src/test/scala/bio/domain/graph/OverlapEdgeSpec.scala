@@ -1,4 +1,4 @@
-package bio.domain.analysis
+package bio.domain.graph
 
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers

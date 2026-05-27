@@ -1,6 +1,6 @@
-package bio.algorithms.analysis
+package bio.algorithms.graph
 
-import bio.domain.analysis.{OverlapEdge, OverlapLength}
+import bio.domain.graph.{OverlapEdge, OverlapLength}
 import bio.parsing.FastaRecord
 
 /** Computes the directed overlap graph `O_k` over a collection of labeled DNA sequences.

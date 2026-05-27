@@ -59,7 +59,13 @@
       "Bash(sbt \"testOnly bio.domain.analysis.RandomMatchProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.RandomMatchProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.RandomMatchSpec\")",
-      "Bash(grep \"^random-string-matching$\")"
+      "Bash(grep \"^random-string-matching$\")",
+      "Bash(git mv *)",
+      "Bash(sbt \"testOnly bio.domain.graph.UndirectedEdge* bio.domain.graph.UndirectedEdgeError*\")",
+      "Bash(sbt \"testOnly bio.domain.graph.TreeCompletionProblem* bio.domain.graph.TreeCompletionProblemError*\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.TreeCompletionSpec\")",
+      "Bash(sbt \"testOnly bio.parsing.TreeAdjacencyFileReaderSpec\")",
+      "Bash(grep -E \"^\\(tree-completion|overlap-graphs\\)$\")"
     ]
   }
 }

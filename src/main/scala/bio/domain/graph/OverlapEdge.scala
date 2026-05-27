@@ -1,4 +1,4 @@
-package bio.domain.analysis
+package bio.domain.graph
 
 /** One directed edge in an overlap graph: there is an edge `from -> to` because a
   * length-`k` suffix of the source sequence equals a length-`k` prefix of the target

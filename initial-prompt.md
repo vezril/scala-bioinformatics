@@ -305,6 +305,22 @@ Features (minimal, more features to be added later, this is just to get started)
     -5.737 -5.217 -5.263 -5.360 -5.958 -6.628 -7.009
 - Hint: One property of the logarithm function is that for any positive numbers x and y, log10(x⋅y)=log10(x)+log10(y).
 
+20. Completing a Tree
+- Problem: An undirected graph is connected if there is a path connecting any two nodes. A tree is a connected (undirected) graph containing no cycles; this definition forces the tree to have a branching structure organized around a central core of nodes, just like its living counterpart. We have already grown familiar with trees in “Mendel's First Law”, where we introduced the probability tree diagram to visualize the outcomes of a random variable. In the creation of a phylogeny, taxa are encoded by the tree's leaves, or nodes having degree 1. A node of a tree having degree larger than 1 is called an internal node.
+- Given: A positive integer n (n≤1000) and an adjacency list corresponding to a graph on n nodes that contains no cycles.
+- Return: The minimum number of edges that can be added to the graph to produce a tree.
+- Sample Dataset
+  - Input:
+    10
+    1 2
+    2 8
+    4 10
+    5 9
+    6 10
+    7 9
+  - Output 
+    3
+- Extra info: After solving this problem, a standard mathematical exercise for the technically minded is to verify that every tree having 2 or more nodes must contain at least two leaves.
 
 
 

@@ -1,6 +1,6 @@
-package bio.algorithms.analysis
+package bio.algorithms.graph
 
-import bio.domain.analysis.{OverlapEdge, OverlapLength}
+import bio.domain.graph.{OverlapEdge, OverlapLength}
 import bio.domain.nucleic.DnaString
 import bio.parsing.FastaRecord
 import org.scalatest.funspec.AnyFunSpec

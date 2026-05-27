@@ -1,4 +1,4 @@
-package bio.domain.analysis
+package bio.domain.graph
 
 /** Construction failures for [[OverlapLength]]. */
 sealed trait OverlapLengthError

@@ -9,6 +9,6 @@ import bio.domain.nucleic.DnaString
   * `{A, C, G, T}` alphabet (and length cap), `ProfileMatrix` enforces the 4-key /
   * equal-column-length invariant. `ConsensusProfileResult` carries no further
   * invariant, so it's a plain `final case class` (mirrors [[bio.parsing.FastaRecord]]
-  * and [[bio.domain.analysis.OverlapEdge]]).
+  * and [[bio.domain.graph.OverlapEdge]]).
   */
 final case class ConsensusProfileResult(consensus: DnaString, profile: ProfileMatrix)

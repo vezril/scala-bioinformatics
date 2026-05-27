@@ -1,4 +1,4 @@
-package bio.domain.analysis
+package bio.domain.graph
 
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
@@ -25,12 +25,12 @@ class OverlapLengthSpec extends AnyFunSpec with Matchers {
 
   describe("OverlapLength construction invariants") {
     it("cannot be constructed via a public companion apply") {
-      assertDoesNotCompile("""bio.domain.analysis.OverlapLength(3)""")
+      assertDoesNotCompile("""bio.domain.graph.OverlapLength(3)""")
     }
 
     it("does not expose a public copy method") {
       assertDoesNotCompile(
-        """bio.domain.analysis.OverlapLength.from(3).toOption.get.copy(value = 7)"""
+        """bio.domain.graph.OverlapLength.from(3).toOption.get.copy(value = 7)"""
       )
     }
   }
