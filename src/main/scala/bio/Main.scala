@@ -1,6 +1,6 @@
 package bio
 
-import bio.problems.{CONSProb, FIBDProb, GRPHProb, LIAProb, MRNAProb, PERMProb, PPERProb, PROBProb, SPLCProb, TREEProb}
+import bio.problems._
 import cats.effect.{ExitCode, IO, IOApp}
 
 object Main extends IOApp {
@@ -13,7 +13,8 @@ object Main extends IOApp {
     //val result = CONSProb.solve()
     //val result = PROBProb.solve()
     //val result = TREEProb.solve()
-    val result = SPLCProb.solve()
+    //val result = SPLCProb.solve()
+    val result = SSETProb.solve()
 
     result.as(ExitCode.Success)
   }

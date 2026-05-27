@@ -68,7 +68,12 @@
       "Bash(grep -E \"^\\(tree-completion|overlap-graphs\\)$\")",
       "Bash(sbt \"testOnly bio.algorithms.nucleic.IntronSplicingSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.RnaSplicingSpec\")",
-      "Bash(grep \"^rna-splicing$\")"
+      "Bash(grep \"^rna-splicing$\")",
+      "Bash(python3 -c \"print\\(pow\\(2, 1000, 1_000_000\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.SubsetUniverseSizeErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.SubsetUniverseSizeSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.SubsetsSpec\")",
+      "Bash(grep \"^counting-subsets$\")"
     ]
   }
 }
