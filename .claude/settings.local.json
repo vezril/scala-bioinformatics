@@ -113,7 +113,9 @@
       "Bash(sbt 'testOnly bio.domain.analysis.GeneticCharacterTableProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.analysis.GeneticCharacterTableSpec')",
       "Bash(sbt 'testOnly bio.domain.nucleic.PerfectMatchingProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.nucleic.PerfectMatchingSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.nucleic.PerfectMatchingSpec')",
+      "Bash(sbt 'testOnly bio.domain.nucleic.NoncrossingMatchingProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.nucleic.NoncrossingMatchingSpec')"
     ]
   }
 }
