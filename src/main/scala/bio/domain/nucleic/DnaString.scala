@@ -3,7 +3,7 @@ package bio.domain.nucleic
 final class DnaString private (val value: String) extends AnyVal
 
 object DnaString {
-  private val MaxLength = 1000
+  private val MaxLength = 100000
 
   def from(s: String): Either[SequenceError, DnaString] =
     if (s.length > MaxLength)

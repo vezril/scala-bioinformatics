@@ -23,14 +23,29 @@ class DnaStringSpec extends AnyFunSpec with Matchers {
       DnaString.from("acgt") shouldBe Left(SequenceError.InvalidCharacter('a'))
     }
 
-    it("rejects a string exceeding 1000 characters") {
-      val long = "A" * 1001
-      DnaString.from(long) shouldBe Left(SequenceError.ExceedsMaxLength(1001))
+    it("accepts a string of 1001 characters (previously over the old 1000 cap)") {
+      val justOverOld = "A" * 1001
+      DnaString.from(justOverOld) shouldBe a[Right[_, _]]
     }
 
     it("accepts a string of exactly 1000 characters") {
       val boundary = "ACGT" * 250
       DnaString.from(boundary) shouldBe a[Right[_, _]]
+    }
+
+    it("accepts a 99977-character DNA (the Rosalind KMP dataset size)") {
+      val kmpSize = "A" * 99977
+      DnaString.from(kmpSize) shouldBe a[Right[_, _]]
+    }
+
+    it("accepts a string of exactly 100000 characters (the new cap)") {
+      val boundary = "ACGT" * 25000
+      DnaString.from(boundary) shouldBe a[Right[_, _]]
+    }
+
+    it("rejects a string exceeding 100000 characters") {
+      val tooLong = "A" * 100001
+      DnaString.from(tooLong) shouldBe Left(SequenceError.ExceedsMaxLength(100001))
     }
 
     it("rejects RNA-specific U character") {
