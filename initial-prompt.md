@@ -481,6 +481,16 @@ Features (minimal, more features to be added later, this is just to get started)
   - Output: 2
 - Hint: Write a function that counts Catalan numbers via dynamic programming. How can we modify this function to apply to our given problem?
 
+36. Motzkin Numbers and RNA Secondary Structures
+- Problem: Similarly to our definition of the Catalan numbers, the n-th Motzkin number m<sub>n</sub> counts the number of ways to form a (not necessarily perfect) noncrossing matching in the complete graph K<sub>n</sub> containing n nodes. For example, Figure 1 demonstrates that m<sub>5</sub>=21. Note in this figure that technically, the "trivial" matching that contains no edges at all is considered to be a matching, because it satisfies the defining condition that no two edges are incident to the same node. How should we compute the Motzkin numbers? As with Catalan numbers, we will take m<sub>0</sub>=m<sub>1</sub>=1. To calculate m<sub>n</sub> in general, assume that the nodes of K<sub>n</sub> are labeled around the outside of a circle with the integers between 1 and n, and consider node 1, which may or may not be involved in a matching. If node 1 is not involved in a matching, then there are m<sub>n−1</sub> ways of matching the remaining n−1 nodes. If node 1 is involved in a matching, then say it is matched to node k: this leaves k−2 nodes on one side of edge {1,k} and n−k nodes on the other side; as with the Catalan numbers, no edge can connect the two sides, which gives us m<sub>k−2</sub>⋅m<sub>n−k</sub> ways of matching the remaining edges. Allowing k to vary between 2 and n yields the following recurrence relation for the Motzkin numbers: m<sub>n</sub>=m<sub>n−1</sub>+∑<sup>n</sup><sub>k=2</sub>m<sub>k−2</sub>⋅m<sub>n−k</sub>. To count all possible secondary structures of a given RNA string that do not contain pseudoknots, we need to modify the Motzkin recurrence so that it counts only matchings of basepair edges in the bonding graph corresponding to the RNA string;
+- Given: An RNA string s of length at most 300 bp.
+- Return: The total number of noncrossing matchings of basepair edges in the bonding graph of s, modulo 1,000,000.
+- Sample Dataset
+  - Input:
+  >Rosalind_57
+  AUAU
+  - Output: 7
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
