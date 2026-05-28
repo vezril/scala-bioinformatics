@@ -111,7 +111,9 @@
       "Bash(sbt 'testOnly bio.domain.graph.CharacterTableProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.graph.CharacterTableSpec')",
       "Bash(sbt 'testOnly bio.domain.analysis.GeneticCharacterTableProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.analysis.GeneticCharacterTableSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.analysis.GeneticCharacterTableSpec')",
+      "Bash(sbt 'testOnly bio.domain.nucleic.PerfectMatchingProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.nucleic.PerfectMatchingSpec')"
     ]
   }
 }

@@ -25,7 +25,8 @@ object Main extends IOApp {
     //val result = NWCKProb.solve()
     //val result = KMPProb.solve()
     //val result = CTBLProb.solve()
-    val result = CSTRProb.solve()
+    //val result = CSTRProb.solve()
+    val result = PMCHProb.solve()
 
     result.as(ExitCode.Success)
   }

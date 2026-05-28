@@ -460,6 +460,15 @@ Features (minimal, more features to be added later, this is just to get started)
     10100
 - Note: Recall that the character table does not encode trivial characters.
 
+34. Perfect Matchings and RNA Secondary Structures
+- Problem: A matching in a graph G is a collection of edges of G for which no node belongs to more than one edge in the collection. See Figure 2 for examples of matchings. If G contains an even number of nodes (say 2n), then a matching on G is perfect if it contains n edges, which is clearly the maximum possible. An example of a graph containing a perfect matching is shown in Figure 3. First, let K<sub>n</sub> denote the complete graph on 2n labeled nodes, in which every node is connected to every other node with an edge, and let p<sub>n</sub> denote the total number of perfect matchings in K<sub>n</sub>. For a given node x , there are 2n−1 ways to join x to the other nodes in the graph, after which point we must form a perfect matching on the remaining 2n−2 nodes. This reasoning provides us with the recurrence relation p<sub>n</sub>=(2n−1)⋅p<sub>n−1</sub>; using the fact that p<sub>1</sub> is 1, this recurrence relation implies the closed equation pn=(2n−1)(2n−3)(2n−5)⋯(3)(1). Given an RNA string s=s<sub>1</sub>…s<sub>n</sub> , a bonding graph for s is formed as follows. First, assign each symbol of s to a node, and arrange these nodes in order around a circle, connecting them with edges called adjacency edges. Second, form all possible edges {A, U} and {C, G}, called basepair edges; we will represent basepair edges with dashed edges, as illustrated by the bonding graph in Figure 4. Note that a matching contained in the basepair edges will represent one possibility for base pairing interactions in s , as shown in Figure 5. For such a matching to exist, s must have the same number of occurrences of 'A' as 'U' and the same number of occurrences of 'C' as 'G'.
+- Given: An RNA string s of length at most 80 bp having the same number of occurrences of 'A' as 'U' and the same number of occurrences of 'C' as 'G'.
+- Return: The total possible number of perfect matchings of basepair edges in the bonding graph of s
+- Sample Dataset
+  - Input
+  >Rosalind_23
+  AGCUAGUCAU
+  - Output: 12
 
 
 Constraints / non-goals:
