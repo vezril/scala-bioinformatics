@@ -444,6 +444,24 @@ Features (minimal, more features to be added later, this is just to get started)
     00110
     00111
 
+33. Creating a Character Table from Genetic Strings
+- Problem: A collection of strings is characterizable if there are at most two possible choices for the symbol at each position of the strings.
+- Given: A collection of at most 100 characterizable DNA strings, each of length at most 300 bp.
+- Return: A character table for which each nontrivial character encodes the symbol choice at a single position of the strings. (Note: the choice of assigning '1' and '0' to the two states of each SNP in the strings is arbitrary.)
+- Sample Dataset
+  - Input
+    ATGCTACC
+    CGTTTACC
+    ATTCGACC
+    AGTCTCCC
+    CGTCTATC
+  - Output:
+    10110
+    10100
+- Note: Recall that the character table does not encode trivial characters.
+
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

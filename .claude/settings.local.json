@@ -109,7 +109,9 @@
       "Bash(sbt 'testOnly bio.domain.analysis.FailureArrayProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.analysis.FailureArraySpec')",
       "Bash(sbt 'testOnly bio.domain.graph.CharacterTableProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.graph.CharacterTableSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.graph.CharacterTableSpec')",
+      "Bash(sbt 'testOnly bio.domain.analysis.GeneticCharacterTableProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.analysis.GeneticCharacterTableSpec')"
     ]
   }
 }
