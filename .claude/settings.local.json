@@ -119,7 +119,9 @@
       "Bash(sbt 'testOnly bio.domain.nucleic.MotzkinMatchingProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.nucleic.MotzkinMatchingSpec')",
       "Bash(sbt 'testOnly bio.domain.analysis.SplicedMotifProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.analysis.SplicedMotifSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.analysis.SplicedMotifSpec')",
+      "Bash(sbt 'testOnly bio.domain.analysis.SharedMotifProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedMotifSpec')"
     ]
   }
 }

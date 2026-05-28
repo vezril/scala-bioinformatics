@@ -505,7 +505,20 @@ Features (minimal, more features to be added later, this is just to get started)
 - Extra Info: For the mathematically inclined, we may equivalently say that t=t<sub>1</sub>t<sub>2</sub>⋯t<sub>m</sub>
   is a subsequence of s=s<sub>1</sub>s<sub>2</sub>⋯s<sub>n</sub> if the characters of t appear in the same order within s. Even more formally, a subsequence of s is a string s<sub>i1</sub>s<sub>i2</sub>…s<sub>ik</sub>, where 1≤i<sub>1</sub><i<sub>2</sub>⋯<i<sub>k</sub>≤n.
 
-
+38. Finding a Shared Motif
+- Problem: A common substring of a collection of strings is a substring of every member of the collection. We say that a common substring is a longest common substring if there does not exist a longer common substring. For example, "CG" is a common substring of "ACGTACGT" and "AACCGTATA", but it is not as long as possible; in this case, "CGTA" is a longest common substring of "ACGTACGT" and "AACCGTATA". Note that the longest common substring is not necessarily unique; for a simple example, "AA" and "CC" are both longest common substrings of "AACC" and "CCAA".
+- Given:  A collection of k (k≤100) DNA strings of length at most 1 kbp each in FASTA format.
+- Return: A longest common substring of the collection. (If multiple solutions exist, you may return any single solution.)
+- Sample Data Set
+  - Input:
+  >Rosalind_1
+  GATTACA
+  >Rosalind_2
+  TAGACCA
+  >Rosalind_3
+  ATACA
+  - Output: AC
+  
 
 Constraints / non-goals:
 - No auth/roles (for now)
