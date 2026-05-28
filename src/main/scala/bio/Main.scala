@@ -23,7 +23,8 @@ object Main extends IOApp {
     //val result = FOUNProb.solve()
     //val result = INODProb.solve()
     //val result = NWCKProb.solve()
-    val result = KMPProb.solve()
+    //val result = KMPProb.solve()
+    val result = CTBLProb.solve()
 
     result.as(ExitCode.Success)
   }
