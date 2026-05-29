@@ -31,7 +31,8 @@ object Main extends IOApp {
     //val result = MOTZProb.solve()
     //val result = SSEQProb.solve()
     //val result = LCSMProb.solve()
-    val result = EDITProb.solve()
+    //val result = EDITProb.solve()
+    val result = EDTAProb.solve()
 
     result.as(ExitCode.Success)
   }

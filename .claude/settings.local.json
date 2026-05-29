@@ -126,7 +126,11 @@
       "Bash(sbt 'testOnly bio.algorithms.analysis.SharedSplicedMotifSpec')",
       "Bash(sbt \"testOnly bio.domain.protein.EditDistanceProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.EditDistanceProblemSpec bio.domain.protein.EditDistanceProblemErrorSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.protein.EditDistanceSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.protein.EditDistanceSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.EditDistanceAlignmentProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.EditAlignmentSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.EditDistanceAlignmentProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.EditDistanceAlignmentSpec\")"
     ]
   }
 }
