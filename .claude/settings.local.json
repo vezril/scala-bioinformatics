@@ -177,7 +177,15 @@
       "Bash(sbt \"testOnly bio.algorithms.protein.ConstantGapAlignmentScoreSpec\")",
       "Bash(echo \"--- exit $? ---\")",
       "Bash(echo \"--- spec exit $? ---\")",
-      "Bash(echo \"--- change exit $? ---\")"
+      "Bash(echo \"--- change exit $? ---\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('\\\\n'.join\\(f\\\\\"{a['id']}: {a['status']}\\\\\" for a in d['artifacts']\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('OUTPUT:', d['outputPath']\\); print\\(d['instruction'][:600]\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('state:', d.get\\('state'\\)\\); p=d.get\\('progress',{}\\); print\\('progress:', p\\)\")",
+      "Bash(sbt \"testOnly bio.domain.protein.AffineGapAlignmentProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.AffineGapAlignmentSpec\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('complete:', d['isComplete']\\); print\\('\\\\n'.join\\(f\\\\\" {a['id']}: {a['status']}\\\\\" for a in d['artifacts']\\)\\)\")",
+      "Bash(openspec --version)",
+      "Bash(echo \"---exit: $?\")"
     ]
   }
 }
