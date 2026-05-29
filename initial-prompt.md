@@ -573,6 +573,27 @@ Features (minimal, more features to be added later, this is just to get started)
   MEANLY
   - Output: 8
 
+43. Multiple Alignment
+- Problem: A multiple alignment of a collection of three or more strings is formed by adding gap symbols to the strings to produce a collection of augmented strings all having the same length. A multiple alignment score is obtained by taking the sum of an alignment score over all possible pairs of augmented strings. The only difference in scoring the alignment of two strings is that two gap symbols may be aligned for a given pair (requiring us to specify a score for matched gap symbols).
+- Given:  A collection of four DNA strings of length at most 10 bp in FASTA format.
+- Return:  A multiple alignment of the strings having maximum score, where we score matched symbols 0 (including matched gap symbols) and all mismatched symbols -1 (thus incorporating a linear gap penalty of 1).
+- Sample Dataset:
+  - Input:
+  >Rosalind_7
+  ATATCCG
+  >Rosalind_35
+  TCCG
+  >Rosalind_23
+  ATGTACTG
+  >Rosalind_44
+  ATGTCTG
+  - Output:
+    -18
+    ATAT-CCG
+    -T---CCG
+    ATGTACTG
+    ATGT-CTG
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

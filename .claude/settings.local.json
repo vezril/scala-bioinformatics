@@ -134,7 +134,11 @@
       "Bash(sbt \"testOnly bio.domain.protein.GlobalAlignmentScoreProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.GlobalAlignmentScoreProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.Blosum62Spec\")",
-      "Bash(sbt \"testOnly bio.algorithms.protein.GlobalAlignmentScoreSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.protein.GlobalAlignmentScoreSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.MultipleAlignmentSpec\")"
     ]
   }
 }

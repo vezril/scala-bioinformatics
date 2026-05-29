@@ -33,7 +33,8 @@ object Main extends IOApp {
     //val result = LCSMProb.solve()
     //val result = EDITProb.solve()
     //val result = EDTAProb.solve()
-    val result = GLOBProb.solve()
+    //val result = GLOBProb.solve()
+    val result = MULTProb.solve()
 
     result.as(ExitCode.Success)
   }
