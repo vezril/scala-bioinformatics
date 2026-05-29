@@ -730,6 +730,22 @@ Features (minimal, more features to be added later, this is just to get started)
     1 5
     1 6
 
+51. Global Alignment with Constant Gap Penalty
+- Problem: In a constant gap penalty, every gap receives some predetermined constant penalty, regardless of its length. Thus, the insertion or deletion of 1000 contiguous symbols is penalized equally to that of a single symbol.
+- Given: Two protein strings s and t in FASTA format (each of length at most 1000 aa).
+- Return: The maximum alignment score between s
+  and t. Use:
+  - The BLOSUM62 scoring matrix.
+  - Constant gap penalty equal to 5.
+- Sample Dataset:
+  - Input:
+  >Rosalind_79
+  PLEASANTLY
+  >Rosalind_41
+  MEANLY
+  - Output:
+  13
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
