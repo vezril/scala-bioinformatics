@@ -37,7 +37,8 @@ object Main extends IOApp {
     //val result = MULTProb.solve()
     //val result = ALPHProb.solve()
     //val result = CTEAProb.solve()
-    val result = LOCAProb.solve()
+    //val result = LOCAProb.solve()
+    val result = SIMSProb.solve()
 
     result.as(ExitCode.Success)
   }

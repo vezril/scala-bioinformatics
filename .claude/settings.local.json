@@ -158,7 +158,12 @@
       "Bash(sbt \"testOnly bio.domain.protein.LocalAlignmentProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.Pam250Spec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.LocalAlignmentSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.protein.LocalAlignmentDebugSpec -- -oF\")"
+      "Bash(sbt \"testOnly bio.algorithms.protein.LocalAlignmentDebugSpec -- -oF\")",
+      "Bash(grep -rl \"left.*DnaString\\\\|right.*DnaString\\\\|DnaString,\\\\s*$\\\\|s: DnaString\" src/main/scala/bio/domain/)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('INSTRUCTION:\\\\n'+d['instruction']\\); print\\('\\\\nTEMPLATE:\\\\n'+d['template']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('STATE:', d.get\\('state'\\)\\); print\\('PROGRESS:', d.get\\('progress'\\)\\); print\\('CONTEXT FILES:', json.dumps\\(d.get\\('contextFiles'\\), indent=2\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.FittingAlignmentProblemSpec bio.algorithms.analysis.FittingAlignmentSpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")"
     ]
   }
 }
