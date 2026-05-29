@@ -594,6 +594,40 @@ Features (minimal, more features to be added later, this is just to get started)
     ATGTACTG
     ATGT-CTG
 
+44. Alignment-Based Phylogeny
+- Problem: Say that we have n taxa represented by strings s<sub>1</sub>,s<sub>2</sub>,…,s<sub>n</sub> with a multiple alignment inducing corresponding augmented strings s<sub>1</sub>,s<sub>2</sub>,…,s<sub>n</sub>. Recall that the number of single-symbol substitutions required to transform one string into another is the Hamming distance between the strings (see “Counting Point Mutations”). Say that we have a rooted binary tree T containing s<sub>1</sub>,s<sub>2</sub>,…,s<sub>n</sub> at its leaves and additional strings s<sub>n+1</sub>,s<sub>n+2</sub>,…,s<sub>2n−1</sub> at its internal nodes, including the root (the number of internal nodes is n−1 by extension of “Counting Phylogenetic Ancestors”). Define d<sub>H</sub>(T) as the sum of dH(s<sub>i</sub>,s<sub>j</sub>) over all edges {s<sub>i</sub>,s<sub>j</sub>} in T: d<sub>H</sub>(T)=∑<sub>{s<sub>i</sub>,s<sub>j</sub>}∈E(T)</sub>d<sub>H</sub>(s<sub>i</sub>,s<sub>j</sub>) Thus, our aim is to minimize d<sub>H</sub>(T).
+- Given: A rooted binary tree T on n (n≤500) species, given in Newick format, followed by a multiple alignment of m (m≤n) augmented DNA strings having the same length (at most 300 bp) corresponding to the species and given in FASTA format.
+- Return: The minimum possible value of d<sub>H</sub>(T), followed by a collection of DNA strings to be assigned to the internal nodes of T that will minimize d<sub>H</sub>(T) (multiple solutions will exist, but you need only output one).
+- Sample Dataset
+  - Input:
+    (((ostrich,cat)rat,(duck,fly)mouse)dog,(elephant,pikachu)hamster)robot;
+    >ostrich
+    AC
+    >cat
+    CA
+    >duck
+    T-
+    >fly
+    GC
+    >elephant
+    -T
+    >pikachu
+    AA
+  - Output:
+    8
+    >rat
+    AC
+    >mouse
+    TC
+    >dog
+    AC
+    >hamster
+    AT
+    >robot
+    AC
+- Note: Given internal strings minimizing d<sub>H</sub>(T), the alignment between any two adjacent strings is not necessarily an optimal global paired alignment. In other words, it may not be the case that dH(s<sub>i</sub>,s<sub>j</sub>) is equal to the edit distance d<sub>E</sub>(s<sub>i</sub>,s<sub>j</sub>).
+- Extra Requirements: Include file parsing of sample data
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

@@ -138,7 +138,13 @@
       "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.MultipleAlignmentProblemSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.analysis.MultipleAlignmentSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.analysis.MultipleAlignmentSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.AlignmentBasedPhylogenyProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.NamedSequenceSpec bio.domain.analysis.AlignmentBasedPhylogenySpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.AlignmentBasedPhylogenyProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.AlignmentBasedPhylogenySpec\")",
+      "Bash(sbt -batch \"console\")",
+      "Bash(sbt \"testOnly bio.problems.ALPHProbSpec\")"
     ]
   }
 }
