@@ -144,7 +144,12 @@
       "Bash(sbt \"testOnly bio.domain.analysis.AlignmentBasedPhylogenyProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.AlignmentBasedPhylogenySpec\")",
       "Bash(sbt -batch \"console\")",
-      "Bash(sbt \"testOnly bio.problems.ALPHProbSpec\")"
+      "Bash(sbt \"testOnly bio.problems.ALPHProbSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReversingSubstitutionsProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReversingSubstitutionSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReversingSubstitutionsProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.ReversingSubstitutionsSpec\")",
+      "Bash(sbt \"testOnly bio.problems.RSUBProbSpec\")"
     ]
   }
 }

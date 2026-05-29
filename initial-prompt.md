@@ -628,6 +628,37 @@ Features (minimal, more features to be added later, this is just to get started)
 - Note: Given internal strings minimizing d<sub>H</sub>(T), the alignment between any two adjacent strings is not necessarily an optimal global paired alignment. In other words, it may not be the case that dH(s<sub>i</sub>,s<sub>j</sub>) is equal to the edit distance d<sub>E</sub>(s<sub>i</sub>,s<sub>j</sub>).
 - Extra Requirements: Include file parsing of sample data
 
+45. Identifying Reversing Substitutions
+- Problem: For a rooted tree T whose internal nodes are labeled with genetic strings, our goal is to identify reversing substitutions in T. Assuming that all the strings of T have the same length, a reversing substitution is defined formally as two parent-child string pairs (s,t) and (v,w) along with a position index i, where: there is a path in T from s down to w; s[i]=w[i]≠v[i]=t[i]; and if u is on the path connecting t to v , then t[i]=u[i]. In other words, the third condition demands that a reversing substitution must be contiguous: no other substitutions can appear between the initial and reversing substitution.
+- Given: A rooted binary tree T with labeled nodes in Newick format, followed by a collection of at most 100 DNA strings in FASTA format whose labels correspond to the labels of T. We will assume that the DNA strings have the same length, which does not exceed 400 bp).
+- Return:  A list of all reversing substitutions in T (in any order), with each substitution encoded by the following three items:
+  - the name of the species in which the symbol is first changed, followed by the name of the species in which it changes back to its original state
+  - the position in the string at which the reversing substitution occurs; and
+  - the reversing substitution in the form original_symbol->substituted_symbol->reverted_symbol.
+- Sample Dataset
+  - Input:
+    (((ostrich,cat)rat,mouse)dog,elephant)robot;
+    >robot
+    AATTG
+    >dog
+    GGGCA
+    >mouse
+    AAGAC
+    >rat
+    GTTGT
+    >cat
+    GAGGC
+    >ostrich
+    GTGTC
+    >elephant
+    AATTC
+  - Output:
+    dog mouse 1 A->G->A
+    dog mouse 2 A->G->A
+    rat ostrich 3 G->T->G
+    rat cat 3 G->T->G
+    dog rat 3 T->G->T
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
