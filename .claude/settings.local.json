@@ -123,7 +123,10 @@
       "Bash(sbt 'testOnly bio.domain.analysis.SharedMotifProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.analysis.SharedMotifSpec')",
       "Bash(sbt 'testOnly bio.domain.analysis.SharedSplicedMotifProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedSplicedMotifSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedSplicedMotifSpec')",
+      "Bash(sbt \"testOnly bio.domain.protein.EditDistanceProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.EditDistanceProblemSpec bio.domain.protein.EditDistanceProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.EditDistanceSpec\")"
     ]
   }
 }
