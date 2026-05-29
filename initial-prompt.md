@@ -703,6 +703,20 @@ Features (minimal, more features to be added later, this is just to get started)
     ACCATAAGCCCTACGTG-CCG
     GCCGTCAGGC-TG-GTGTCCG
 
+49. Isolating Symbols in Alignments
+- Problem: Say that we have two strings s and t of respective lengths m and n and an alignment score. Let's define a matrix M corresponding to s and t by setting M<sub>j,k</sub> equal to the maximum score of any alignment that aligns s[j] with t[k]. So each entry in M can be equal to at most the maximum score of any alignment of s and t.
+- Given: Two DNA strings s and t in FASTA format, each having length at most 1000 bp.
+- Return: The maximum alignment score of a global alignment of s and t, followed by the sum of all elements of the matrix M corresponding to s and t that was defined above. Apply the mismatch score introduced in “Finding a Motif with Modifications”.
+- Sample Dataset:
+  - Input
+  >Rosalind_35
+  ATAGATA
+  >Rosalind_5
+  ACAGGTA
+  - Output
+  3
+  -139
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
