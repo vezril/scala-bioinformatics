@@ -770,6 +770,24 @@ Features (minimal, more features to be added later, this is just to get started)
     PRT---EINS
     PRTWPSEIN-
 
+53. Local Alignment with Affine Gap Penalty
+- Given: Two protein strings s and t in FASTA format (each having length at most 10,000 aa).
+- Return: The maximum local alignment score of s and t , followed by substrings r and u of s and t, respectively, that correspond to the optimal local alignment of s and t. Use:
+  - The BLOSUM62 scoring matrix.
+  - Gap opening penalty equal to 11.
+  - Gap extension penalty equal to 1.
+If multiple solutions exist, then you may output any one.
+  - Sample Data:
+    - Input
+    >Rosalind_8
+    PLEASANTLY
+    >Rosalind_18
+    MEANLY
+  - Output
+    12
+    LEAS
+    MEAN
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

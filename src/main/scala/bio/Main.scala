@@ -42,7 +42,8 @@ object Main extends IOApp {
     //val result = OSYMProb.solve()
     //val result = KSIMProb.solve()
     //val result = GCONProb.solve()
-    val result = GAFFProb.solve()
+    //val result = GAFFProb.solve()
+    val result = LAFFProb.solve()
 
     result.as(ExitCode.Success)
   }
