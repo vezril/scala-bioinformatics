@@ -149,7 +149,10 @@
       "Bash(sbt \"testOnly bio.domain.analysis.ReversingSubstitutionSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.ReversingSubstitutionsProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.ReversingSubstitutionsSpec\")",
-      "Bash(sbt \"testOnly bio.problems.RSUBProbSpec\")"
+      "Bash(sbt \"testOnly bio.problems.RSUBProbSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.OptimalAlignmentCountProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.OptimalAlignmentCountProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.OptimalAlignmentCountSpec\")"
     ]
   }
 }

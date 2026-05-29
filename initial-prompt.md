@@ -659,6 +659,18 @@ Features (minimal, more features to be added later, this is just to get started)
     rat cat 3 G->T->G
     dog rat 3 T->G->T
 
+46. Counting Optimal Alignments
+- Problem: Recall from “Edit Distance Alignment” that if s′ and t′ are the augmented strings corresponding to an alignment of strings s and t , then the edit alignment score of s′ and t′ was given by the Hamming distance d<sub>H</sub>(s′,t′) (because s′ and t′ have the same length and already include gap symbols to denote insertions/deletions). As a result, we obtain d<sub>E</sub>(s,t)=mins′,t′d<sub>H</sub>(s′,t′), where the minimum is taken over all alignments of s and t . Strings s′ and t′ achieving this minimum correspond to an optimal alignment with respect to edit alignment score.
+- Given: Two protein strings s and t in FASTA format, each of length at most 1000 aa.
+- Return: he total number of optimal alignments of s and t with respect to edit alignment score, modulo 134,217,727 (227-1).
+- Sample Dataset:
+  - Input:
+  >Rosalind_78
+  PLEASANTLY
+  >Rosalind_33
+  MEANLY
+  - Output: 4
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
