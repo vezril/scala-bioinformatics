@@ -671,6 +671,23 @@ Features (minimal, more features to be added later, this is just to get started)
   MEANLY
   - Output: 4
 
+47. Local Alignment with Scoring Matrix
+- Problem: A local alignment of two strings s and t is an alignment of substrings r and u of s and t, respectively. Let opt(r,u) denote the score of an optimal alignment of r and u with respect to some predetermined alignment score.
+- Given: Two protein strings s and t in FASTA format (each having length at most 1000 aa).
+- Return: A maximum alignment score along with substrings r and u of s and t, respectively, which produce this maximum alignment score (multiple solutions may exist, in which case you may output any one). Use:
+  - The PAM250 scoring matrix.
+  - Linear gap penalty equal to 5.
+- Sample Dataset:
+  - Input:
+  >Rosalind_80
+  MEANLYPRTEINSTRING
+  >Rosalind_21
+  PLEASANTLYEINSTEIN
+  - Output:
+    23
+    LYPRTEINSTRIN
+    LYEINSTEIN
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
