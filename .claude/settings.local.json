@@ -121,7 +121,9 @@
       "Bash(sbt 'testOnly bio.domain.analysis.SplicedMotifProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.analysis.SplicedMotifSpec')",
       "Bash(sbt 'testOnly bio.domain.analysis.SharedMotifProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedMotifSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedMotifSpec')",
+      "Bash(sbt 'testOnly bio.domain.analysis.SharedSplicedMotifProblemSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.analysis.SharedSplicedMotifSpec')"
     ]
   }
 }
