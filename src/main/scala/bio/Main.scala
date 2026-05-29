@@ -39,7 +39,8 @@ object Main extends IOApp {
     //val result = CTEAProb.solve()
     //val result = LOCAProb.solve()
     //val result = SIMSProb.solve()
-    val result = OSYMProb.solve()
+    //val result = OSYMProb.solve()
+    val result = KSIMProb.solve()
 
     result.as(ExitCode.Success)
   }

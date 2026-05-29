@@ -717,6 +717,19 @@ Features (minimal, more features to be added later, this is just to get started)
   3
   -139
 
+50. Finding All Similar Motifs
+- Given: A positive integer k(k≤50), a DNA string s of length at most 5 kbp representing a motif, and a DNA string t of length at most 50 kbp representing a genome.
+- Return: All substrings t′ of t such that the edit distance d<sub>E</sub>(s,t′)is less than or equal to k . Each substring should be encoded by a pair containing its location in t followed by its length.
+- Sample Dataset
+  - Input:
+    2
+    ACGTAG
+    ACGGATCGGCATCGT
+  - Output
+    1 4
+    1 5
+    1 6
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
