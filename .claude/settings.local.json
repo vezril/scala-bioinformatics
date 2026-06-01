@@ -225,7 +225,15 @@
       "Bash(sbt \"testOnly bio.domain.graph.InconsistentCharacterSetProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.InconsistentCharacterSetProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.ConsistentCharacterTableSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.FixInconsistentCharacterSetSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.FixInconsistentCharacterSetSpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('OUTPUT:', d.get\\('outputPath'\\)\\); print\\('---TEMPLATE---'\\); print\\(d.get\\('template',''\\)\\); print\\('---INSTRUCTION---'\\); print\\(d.get\\('instruction',''\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('isComplete:', d['isComplete']\\); [print\\(a['id'], '->', a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('state:', d.get\\('state'\\)\\); p=d.get\\('progress',{}\\); print\\('progress:', p\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.ShortestSuperstringSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.GenomeAssemblySpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('isComplete:', d['isComplete']\\); [print\\(a['id'],'->',a['status']\\) for a in d['artifacts']]\")"
     ]
   }
 }
