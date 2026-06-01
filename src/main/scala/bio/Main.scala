@@ -53,7 +53,8 @@ object Main extends IOApp {
     //val result = CHBPProb.solve()
     //val result = CSETProb.solve()
     //val result = LONGProb.solve()
-    val result = LEXFProb.solve()
+    //val result = LEXFProb.solve()
+    val result = KMERProb.solve()
 
     result.as(ExitCode.Success)
   }
