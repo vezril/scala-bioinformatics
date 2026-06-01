@@ -985,6 +985,22 @@ If multiple solutions exist, then you may output any one.
     (TGA, GAT)
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/dbru_data.txt for the data input for the algorithm
 
+66. Genome Assembly with Perfect Coverage
+- Problem: A circular string is a string that does not have an initial or terminal element; instead, the string is viewed as a necklace of symbols. We can represent a circular string as a string enclosed in parentheses. For example, consider the circular DNA string (ACGTAC), and note that because the string "wraps around" at the end, this circular string can equally be represented by (CGTACA), (GTACAC), (TACACG), (ACACGT), and (CACGTA). The definitions of substrings and superstrings are easy to generalize to the case of circular strings (keeping in mind that substrings are allowed to wrap around).
+- Given: A collection of (error-free) DNA k-mers (k≤50) taken from the same strand of a circular chromosome. In this dataset, all k-mers from this strand of the chromosome are present, and their de Bruijn graph consists of exactly one simple cycle.
+- Return: A cyclic superstring of minimal length containing the reads (thus corresponding to a candidate cyclic chromosome).
+- Sample Data
+  - Input
+    ATTAC
+    TACAG
+    GATTA
+    ACAGA
+    CAGAT
+    TTACA
+    AGATT
+  - Output: GATTACA
+- Note: The assumption made above that all reads derive from the same strand is practically unrealistic; in reality, researchers will not know the strand of DNA from which a given read has been sequenced.
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/pcov_data.txt for data input to solve the algorithm
 
 
 Constraints / non-goals:

@@ -249,7 +249,14 @@
       "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.DeBruijnGraphConstructionSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.DeBruijnGraphConstructionSpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d['instruction']\\); print\\('=====TEMPLATE====='\\); print\\(d['template']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('state:', d.get\\('state'\\)\\); print\\('progress:', d.get\\('progress'\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.PerfectCoverageProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.PerfectCoverageProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.CyclicSuperstringSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.PerfectCoverageAssemblySpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+$')"
     ]
   }
 }
