@@ -233,7 +233,11 @@
       "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.ShortestSuperstringSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.GenomeAssemblySpec\")",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('isComplete:', d['isComplete']\\); [print\\(a['id'],'->',a['status']\\) for a in d['artifacts']]\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('isComplete:', d['isComplete']\\); [print\\(a['id'],'->',a['status']\\) for a in d['artifacts']]\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.KmerEnumerationProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.KmerEnumerationProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.KmerEnumerationSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.EnumerateKmersSpec\")"
     ]
   }
 }

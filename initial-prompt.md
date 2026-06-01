@@ -914,6 +914,35 @@ If multiple solutions exist, then you may output any one.
 - Extra Info: Although the goal of fragment assembly is to produce an entire genome, in practice it is only possible to construct several contiguous portions of each chromosome, called contigs. Furthermore, the assumption made above that reads all derive from the same strand is also practically unrealistic; in reality, researchers will not know the strand of DNA from which a given read has been sequenced.
 - Extra: Use the file located here for the input of the algorithm: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/long_data.txt
 
+63. Enumerating k-mers Lexicographically
+- Problem: Assume that an alphabet 𝒜 has a predetermined order; that is, we write the alphabet as a permutation 𝒜=(a<sub>1</sub>,a<sub>2</sub>,…,a<sub>k</sub>), where a<sub>1</sub><a<sub>2</sub><⋯<a<sub>k</sub>. For instance, the English alphabet is organized as (A,B,…,Z). Given two strings s and t having the same length n , we say that s precedes t in the lexicographic order (and write s<L<sub>ext</sub>) if the first symbol s[j] that doesn't match t[j] satisfies s<sub>j</sub> < t<sub>j</sub> in 𝒜
+- Given: A collection of at most 10 symbols defining an ordered alphabet, and a positive integer n (n≤10).
+- Return: All strings of length n that can be formed from the alphabet, ordered lexicographically (use the standard order of symbols in the English alphabet).
+- Sample Dataset
+  - Input:
+    A C G T
+    2
+  - Output:
+    AA
+    AC
+    AG
+    AT
+    CA
+    CC
+    CG
+    CT
+    GA
+    GC
+    GG
+    GT
+    TA
+    TC
+    TG
+    TT
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/lexf_data.txt for the input data into the algorithm
+
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
