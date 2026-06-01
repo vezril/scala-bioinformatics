@@ -202,7 +202,9 @@
       "Bash(sbt \"testOnly bio.domain.graph.SplitSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.SplitDistanceProblemSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.SplitDistanceSpec\")",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")",
+      "Bash(sbt \"testOnly bio.domain.graph.CountingQuartetsProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.CountingQuartetsSpec\")"
     ]
   }
 }

@@ -824,6 +824,18 @@ If multiple solutions exist, then you may output any one.
   - Output: 2
 - Extra: Make sure to read from the sample txt file located here: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/sptd_data.txt for the solution algorithm
 
+57. Counting Quartets
+- Problem: A quartet AB∣CD is consistent with a binary tree T if the quartet can be inferred from one of the splits of T (see “Quartets” for a description of inferring quartets from splits). Let q(T) denote the total number of quartets that are consistent with T.
+- Given:  A positive integer n (4≤n≤5000), followed by an unrooted binary tree T in Newick format on n taxa.
+- Return: The value of q(T) modulo 1,000,000.
+- Sample Dataset
+  - Input:
+    6
+    (lobster,(cat,dog),(caterpillar,(elephant,mouse)));
+  - Output:
+  15
+- Extra: Please use the file: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/cntq_data.txt to ingest the data into the solutions algorithm
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
