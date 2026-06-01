@@ -243,7 +243,13 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.KmerCompositionProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.KmerCompositionSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.ComposeKmersSpec\")",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName'], '| complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName'], '| complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('applyRequires:', d['applyRequires']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('state:', d.get\\('state'\\)\\); print\\('progress:', d.get\\('progress',{}\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.DeBruijnGraphSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.DeBruijnGraphConstructionSpec\")"
     ]
   }
 }

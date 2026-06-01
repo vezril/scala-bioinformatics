@@ -959,6 +959,34 @@ If multiple solutions exist, then you may output any one.
     4 1 4 3 0 1 1 5 1 3 1 2 2 1 2 0 1 1 3 1 2 1 3 1 1 1 1 2 2 5 1 3 0 2 2 1 1 1 1 3 1 0 0 1 5 5 1 5 0 2 0 2 1 2 1 1 1 2 0 1 0 0 1 1 3 2 1 0 3 2 3 0 0 2 0 8 0 0 1 0 2 1 3 0 0 0 1 4 3 2 1 1 3 1 2 1 3 1 2 1 2 1 1 1 2 3 2 1 1 0 1 1 3 2 1 2 6 2 1 1 1 2 3 3 3 2 3 0 3 2 1 1 0 0 1 4 3 0 1 5 0 2 0 1 2 1 3 0 1 2 2 1 1 0 3 0 0 4 5 0 3 0 2 1 1 3 0 3 2 2 1 1 0 2 1 0 2 2 1 2 0 2 2 5 2 2 1 1 2 1 2 2 2 2 1 1 3 4 0 2 1 1 0 1 2 2 1 1 1 5 2 0 3 2 1 1 2 2 3 0 3 0 1 3 1 2 3 0 2 1 2 2 1 2 3 0 1 2 3 1 1 3 1 0 1 1 3 0 2 1 2 2 0 2 1 1
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/kmer_data.txt for the data input into the algorithm
 
+65. Constructing a De Bruijn Graph
+- Problem: Consider a set S of (k+1)-mers of some unknown DNA string. Let S<sup>rc<s/up> denote the set containing all reverse complements of the elements of S. (recall from “Counting Subsets” that sets are not allowed to contain duplicate elements). The de Bruijn graph B<sub>k</sub> of order k corresponding to S ∪ S<sup>rc</sup> is a digraph defined in the following way:
+  - Nodes of B<sub>k</sub> correspond to all k-mers that are present as a substring of a (k+1)-mer from S ∪ S<sup>rc</sup>
+  - Edges of B<sub>k</sub> are encoded by the (k+1)-mers of S ∪ S<sup>rc</sup> in the following way: for each (k+1)-mer r in S ∪ S<sup>rc</sup>, form a directed edge (r[1:k], r[2:k+1]).
+- Given: A collection of up to 1000 (possibly repeating) DNA strings of equal length (not exceeding 50 bp) corresponding to a set S of (k+1)-mers.
+- Return: The adjacency list corresponding to the de Bruijn graph corresponding to S ∪ S<sup>rc</sup>
+- Sample Dataset
+  - Input
+    TGAT
+    CATG
+    TCAT
+    ATGC
+    CATC
+    CATC
+  - Output
+    (ATC, TCA)
+    (ATG, TGA)
+    (ATG, TGC)
+    (CAT, ATC)
+    (CAT, ATG)
+    (GAT, ATG)
+    (GCA, CAT)
+    (TCA, CAT)
+    (TGA, GAT)
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/dbru_data.txt for the data input for the algorithm
+
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
