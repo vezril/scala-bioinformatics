@@ -880,6 +880,22 @@ If multiple solutions exist, then you may output any one.
     (dog,(cat,rabbit),(rat,(elephant,mouse)));
 - Extra: Use the file located here: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/chbp_data.txt as the input data for the algorithm
 
+61. Fixing an Inconsistent Character Set
+- Problem: A submatrix of a matrix M is a matrix formed by selecting rows and columns from M and taking only those entries found at the intersections of the selected rows and columns. We may also think of a submatrix as formed by deleting the remaining rows and columns from M.
+- Given: An inconsistent character table C on at most 100 taxa.
+- Return: A submatrix of C′ representing a consistent character table on the same taxa and formed by deleting a single row of C. (If multiple solutions exist, you may return any one.)
+- Sample Dataset:
+  - Input:
+    100001
+    000110
+    111000
+    100111
+  - Output:
+    000110
+    100001
+    100111
+- Extra: Read the data to input into the algorithm from /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/cset_data.txt
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

@@ -220,7 +220,12 @@
       "Bash(sbt \"testOnly bio.domain.graph.CharacterBasedPhylogenyProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.NewickTreeSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.CharacterBasedPhylogenySpec\")",
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")"
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('applyRequires:', d['applyRequires']\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.InconsistentCharacterSetProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.InconsistentCharacterSetProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.ConsistentCharacterTableSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.FixInconsistentCharacterSetSpec\")"
     ]
   }
 }

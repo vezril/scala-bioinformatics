@@ -50,7 +50,8 @@ object Main extends IOApp {
     //val result = CNTQProb.solve()
     //val result = QRTDProb.solve()
     //val result = SETOProb.solve()
-    val result = CHBPProb.solve()
+    //val result = CHBPProb.solve()
+    val result = CSETProb.solve()
 
     result.as(ExitCode.Success)
   }
