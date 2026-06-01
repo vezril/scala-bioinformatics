@@ -47,7 +47,8 @@ object Main extends IOApp {
     //val result = CUNRProb.solve()
     //val result = QRTProb.solve()
     //val result = SPTDProb.solve()
-    val result = CNTQProb.solve()
+    //val result = CNTQProb.solve()
+    val result = QRTDProb.solve()
 
     result.as(ExitCode.Success)
   }

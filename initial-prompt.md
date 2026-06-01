@@ -836,6 +836,17 @@ If multiple solutions exist, then you may output any one.
   15
 - Extra: Please use the file: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/cntq_data.txt to ingest the data into the solutions algorithm
 
+58. In “Counting Quartets”, we found an expression for q(T), the number of quartets that can be inferred from an unrooted binary tree containing n taxa. If T<sub>1</sub> and T<sub>2</sub> are both unrooted binary trees on the same n taxa, then we now let q(T<sub>1</sub>,T<sub>2</sub>) denote the number of inferred quartets that are common to both trees. The quartet distance between T<sub>1</sub> and T<sub>2</sub>, dq(T<sub>1</sub>,T<sub>2</sub>) is the number of quartets that are only inferred from one of the trees. More precisely, dq(T<sub>1</sub>,T<sub>2</sub>)=q(T<sub>1</sub>)+q(T<sub>2</sub>)−2q(T<sub>1</sub>,T<sub>2</sub>).
+- Given: A list containing n taxa (n≤2000) and two unrooted binary trees T<sub>1</sub> and T<sub>2</sub> on the given taxa. Both T<sub>1</sub> and T<sub>2</sub> are given in Newick format.
+- Return: The quartet distance d<sub>q</sub>(T<sub>1</sub>,T<sub>2</sub>)
+- Sample Dataset
+  - Input:
+    A B C D E
+    (A,C,((B,D),E));
+    (C,(B,D),(A,E));
+  - Output: 4
+- Extra, use the file located in: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/qrtd_data.txt to ingest the data into the algorithm
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
