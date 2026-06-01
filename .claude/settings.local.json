@@ -256,7 +256,10 @@
       "Bash(sbt \"testOnly bio.domain.graph.PerfectCoverageProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.CyclicSuperstringSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.PerfectCoverageAssemblySpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+$')"
+      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+$')",
+      "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyReadsProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyReadsProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.GenomeAssemblyReadsSpec\")"
     ]
   }
 }

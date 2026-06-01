@@ -1002,6 +1002,19 @@ If multiple solutions exist, then you may output any one.
 - Note: The assumption made above that all reads derive from the same strand is practically unrealistic; in reality, researchers will not know the strand of DNA from which a given read has been sequenced.
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/pcov_data.txt for data input to solve the algorithm
 
+67. Genome Assembly Using Reads
+- Problem: A directed cycle is simply a cycle in a directed graph in which the head of one edge is equal to the tail of the next (so that every edge in the cycle is traversed in the same direction). For a set of DNA strings S and a positive integer k, let S<sub>k</sub> denote the collection of all possible k-mers of the strings in S.
+- Given: A collection S of (error-free) reads of equal length (not exceeding 50 bp). In this dataset, for some positive integer k, the de Bruijn graph B<sub>k</sub> on S<sub>k+1</sub> ∪ S <sup>rc</sup><sub>k+1</sub> consists of exactly two directed cycles.
+- Return: A cyclic superstring of minimal length containing every read or its reverse complement.
+- Sample Dataset:
+  - Input:
+    AATCT
+    TGTAA
+    GATTA
+    ACAGA
+  - Output: GATTACA
+- Note: The reads "AATCT" and "TGTAA" are not present in the answer, but their reverse complements "AGATT" and "TTACA" are present in the circular string (GATTACA).
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/gasm_data.txt as the file input for data, to solve the algorithm
 
 Constraints / non-goals:
 - No auth/roles (for now)
