@@ -190,7 +190,11 @@
       "Bash(sbt 'testOnly bio.domain.protein.LocalAffineAlignmentProblemSpec')",
       "Bash(sbt 'testOnly bio.algorithms.protein.LocalAffineAlignmentSpec')",
       "Bash(sbt 'testOnly bio.domain.combinatorics.LeafCountSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.combinatorics.UnrootedBinaryTreesSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.combinatorics.UnrootedBinaryTreesSpec')",
+      "Bash(sbt 'testOnly bio.domain.graph.QuartetsProblemSpec')",
+      "Bash(sbt 'testOnly bio.domain.graph.QuartetSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.graph.QuartetsSpec')",
+      "Bash(sbt \"runMain bio.Main\")"
     ]
   }
 }

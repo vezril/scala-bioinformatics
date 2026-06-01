@@ -796,6 +796,22 @@ If multiple solutions exist, then you may output any one.
   - Input: 5
   - Sample Output: 15
 
+55. Quartets
+- Problem: A partial split of a set S of n taxa models a partial character and is denoted by A∣B, where A and B are still the two disjoint subsets of taxa divided by the character. Unlike in the case of splits, we do not necessarily require that A∪B=S; (A ∪ B)<sup>c</sup? corresponds to those taxa for which we lack conclusive evidence regarding the character. We can assemble a collection of partial characters into a generalized partial character table C in which the symbol x is placed in C<sub>i</sub>,j if we do not have conclusive evidence regarding the jth taxon with respect to the ith partial character. A quartet is a partial split A ∣ B in which both A and B contain precisely two elements. For the sake of simplicity, we often will consider quartets instead of partial characters. We say that a quartet A∣B is inferred from a partial split C ∣ D if A ⊆ C and B ⊆ D (or equivalently A ⊆ D and B ⊆ C). For example, {1,3}∣{2,4} and {3,5}∣{2,4} can be inferred from {1,3,5}∣{2,4}.
+- Given: A partial character table C.
+- Return: The collection of all quartets that can be inferred from the splits corresponding to the underlying characters of C.
+- Sample Dataset
+  - Input:
+    cat dog elephant ostrich mouse rabbit robot
+    01xxx00
+    x11xx00
+    111x00x
+  - Output:
+    {elephant, dog} {rabbit, robot}
+    {cat, dog} {mouse, rabbit}
+    {mouse, rabbit} {cat, elephant}
+    {dog, elephant} {mouse, rabbit}
+
 
 Constraints / non-goals:
 - No auth/roles (for now)
