@@ -812,6 +812,17 @@ If multiple solutions exist, then you may output any one.
     {mouse, rabbit} {cat, elephant}
     {dog, elephant} {mouse, rabbit}
 
+56. Phylogeny Comparison with Split Distance
+- Problem: Define the split distance between two unrooted binary trees as the number of nontrivial splits contained in one tree but not the other. Formally, if s(T<sub>1</sub>,T<sub>2</sub>) denotes the number of nontrivial splits shared by unrooted binary trees T<sub>1</sub> and T<sub>2</sub>, Then their split distance is d<sub>split</sub>(T<sub>1</sub>,T<sub>2</sub>)=2(n−3)−2s(T<sub>1</sub>,T<sub>2</sub>).
+- Given: A collection of at most 3,000 species taxa and two unrooted binary trees T<sub>1</sub> and T<sub>2</sub> on these taxa in Newick format.
+- Return: The split distance d<sub>split</sub>(T<sub>1</sub>, T<sub>2</sub>)
+- Sample Dataset:
+  - Input:
+    dog rat elephant mouse cat rabbit
+    (rat,(dog,cat),(rabbit,(elephant,mouse)));
+    (rat,(cat,dog),(elephant,(mouse,rabbit)));
+  - Output: 2
+- Extra: Make sure to read from the sample txt file located here: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/sptd_data.txt for the solution algorithm
 
 Constraints / non-goals:
 - No auth/roles (for now)

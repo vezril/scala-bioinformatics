@@ -194,7 +194,15 @@
       "Bash(sbt 'testOnly bio.domain.graph.QuartetsProblemSpec')",
       "Bash(sbt 'testOnly bio.domain.graph.QuartetSpec')",
       "Bash(sbt 'testOnly bio.algorithms.graph.QuartetsSpec')",
-      "Bash(sbt \"runMain bio.Main\")"
+      "Bash(sbt \"runMain bio.Main\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('===INSTRUCTION==='\\); print\\(d['instruction']\\); print\\('===TEMPLATE==='\\); print\\(d['template']\\); print\\('===DEPS==='\\); print\\(d['dependencies']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('===INSTRUCTION==='\\); print\\(d['instruction']\\); print\\('===TEMPLATE==='\\); print\\(d['template']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('state:', d.get\\('state'\\)\\); print\\('progress:', d.get\\('progress'\\)\\); print\\('contextFiles:', json.dumps\\(d.get\\('contextFiles'\\), indent=2\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.SplitSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.SplitDistanceProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.SplitDistanceSpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); [print\\(a['id'], a['status']\\) for a in d['artifacts']]\")"
     ]
   }
 }
