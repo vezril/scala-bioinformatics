@@ -207,7 +207,13 @@
       "Bash(sbt \"testOnly bio.algorithms.graph.CountingQuartetsSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.QuartetDistanceProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.QuartetDistanceProblemSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.QuartetDistanceSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.QuartetDistanceSpec\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('OK design ready'\\)\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.SetOperationsProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.SetOperationsProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.SetOperationsResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.SetOperationsSpec\")",
+      "Bash(echo \"EXIT: $?\")"
     ]
   }
 }

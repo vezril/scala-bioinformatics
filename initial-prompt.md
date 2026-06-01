@@ -847,6 +847,25 @@ If multiple solutions exist, then you may output any one.
   - Output: 4
 - Extra, use the file located in: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/qrtd_data.txt to ingest the data into the algorithm
 
+59. Introduction to Set Operations
+- Problem: If A and B are sets, then their union A ∪ B is the set comprising any elements in either A or B; their intersection A ∩ B is the set of elements in both A and B; and their set difference A−B is the set of elements in A but not in B. Furthermore, if A is a subset of another set U, then the set complement of A with respect to U is defined as the set A<sup>c</sup>=U−A. See the Sample sections below for examples.
+- Given: A positive integer n (n≤20,000) and two subsets A and B of {1,2,…,n} .]
+- Return: Six sets: A∪B , A∩B , A−B, B−A, A<sup>c</sup>, and B<sup>c</sup> (where set complements are taken with respect to {1,2,…,n}).
+- Sample Dataset
+  - Input:
+    10
+    {1, 2, 3, 4, 5}
+    {2, 8, 5, 10}
+  - Output
+    {1, 2, 3, 4, 5, 8, 10}
+    {2, 5}
+    {1, 3, 4}
+    {8, 10}
+    {8, 9, 10, 6, 7}
+    {1, 3, 4, 6, 7, 9}
+- Extra Info: From the definitions above, one can see that A∪B=B∪A and A∩B=B∩A for all sets A and B , but it is not necessarily the case that A−B=B−A(as seen in the Sample
+- Extra: Sample data is located in: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/seto_data.txt, use the file content for the algorithm
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
