@@ -188,7 +188,9 @@
       "Bash(echo \"---exit: $?\")",
       "Bash(sbt -warn 'testOnly bio.domain.protein.LocalAffineAlignmentProblemSpec')",
       "Bash(sbt 'testOnly bio.domain.protein.LocalAffineAlignmentProblemSpec')",
-      "Bash(sbt 'testOnly bio.algorithms.protein.LocalAffineAlignmentSpec')"
+      "Bash(sbt 'testOnly bio.algorithms.protein.LocalAffineAlignmentSpec')",
+      "Bash(sbt 'testOnly bio.domain.combinatorics.LeafCountSpec')",
+      "Bash(sbt 'testOnly bio.algorithms.combinatorics.UnrootedBinaryTreesSpec')"
     ]
   }
 }

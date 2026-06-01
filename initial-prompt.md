@@ -788,6 +788,15 @@ If multiple solutions exist, then you may output any one.
     LEAS
     MEAN
 
+54. Counting Unrooted Binary Trees
+- Problem: Two unrooted binary trees T<sub>1</sub> and T<sub>2</sub> having the same n labeled leaves are considered to be equivalent if there is some assignment of labels to the internal nodes of T<sub>1</sub> and T<sub>2</sub> so that the adjacency lists of the two trees coincide. As a result, note that T<sub>1</sub> and T<sub>2</sub> must have the same splits; conversely, if the two trees do not have the same splits, then they are considered distinct. Let b(n) denote the total number of distinct unrooted binary trees having n labeled leaves.
+- Given:  A positive integer n (n≤1000)
+- Return: The value of b(n) modulo 1,000,000.
+- Sample Dataset
+  - Input: 5
+  - Sample Output: 15
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
