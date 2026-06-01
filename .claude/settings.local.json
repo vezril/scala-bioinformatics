@@ -213,7 +213,14 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.SetOperationsProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.SetOperationsResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.SetOperationsSpec\")",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('--- INSTRUCTION ---'\\); print\\(d['instruction']\\); print\\('--- TEMPLATE ---'\\); print\\(d['template']\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")",
+      "Bash(sbt \"testOnly bio.domain.graph.CharacterBasedPhylogenyProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.CharacterBasedPhylogenyProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.NewickTreeSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.CharacterBasedPhylogenySpec\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema:', d['schemaName']\\); print\\('complete:', d['isComplete']\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")"
     ]
   }
 }

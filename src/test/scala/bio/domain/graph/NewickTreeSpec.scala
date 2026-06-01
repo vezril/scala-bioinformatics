@@ -75,4 +75,51 @@ class NewickTreeSpec extends AnyFunSpec with Matchers {
       tree.labels shouldBe Set("a", "b", "c", "d", "e", "f", "g")
     }
   }
+
+  describe("NewickTree.render") {
+    it("renders a leaf as its bare label terminated by a semicolon") {
+      NewickTree(Some("cat"), Vector.empty).render shouldBe "cat;"
+    }
+
+    it("renders an internal node as parenthesised, comma-joined children") {
+      val tree = NewickTree(
+        None,
+        Vector(
+          NewickTree(Some("a"), Vector.empty),
+          NewickTree(Some("b"), Vector.empty)
+        )
+      )
+      tree.render shouldBe "(a,b);"
+    }
+
+    it("renders a nested unrooted tree terminated by a single semicolon") {
+      val tree = NewickTree(
+        None,
+        Vector(
+          NewickTree(Some("dog"), Vector.empty),
+          NewickTree(
+            None,
+            Vector(
+              NewickTree(Some("cat"), Vector.empty),
+              NewickTree(Some("rabbit"), Vector.empty)
+            )
+          ),
+          NewickTree(
+            None,
+            Vector(
+              NewickTree(Some("rat"), Vector.empty),
+              NewickTree(
+                None,
+                Vector(
+                  NewickTree(Some("elephant"), Vector.empty),
+                  NewickTree(Some("mouse"), Vector.empty)
+                )
+              )
+            )
+          )
+        )
+      )
+      tree.render shouldBe "(dog,(cat,rabbit),(rat,(elephant,mouse)));"
+    }
+  }
 }

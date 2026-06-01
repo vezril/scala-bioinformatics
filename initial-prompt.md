@@ -866,6 +866,20 @@ If multiple solutions exist, then you may output any one.
 - Extra Info: From the definitions above, one can see that A∪B=B∪A and A∩B=B∩A for all sets A and B , but it is not necessarily the case that A−B=B−A(as seen in the Sample
 - Extra: Sample data is located in: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/seto_data.txt, use the file content for the algorithm
 
+60. Character-Based Phylogeny
+- Problem: Because a tree having n nodes has n−1 edges (see “Completing a Tree”), removing a single edge from a tree will produce two smaller, disjoint trees. Recall from “Creating a Character Table” that for this reason, each edge of an unrooted binary tree corresponds to a split S∣S<sup>c</sup>, where S is a subset of the taxa. A consistent character table is one whose characters' splits do not conflict with the edge splits of some unrooted binary tree T on the n taxa. More precisely, S1∣S<sup>c</sup><sub>1</sub> conflicts with S<sub>2</sub>∣S<sup>c</sup><sub>2</sub> if all four intersections S<sub>1</sub>∩S<sub>2</sub>, S<sub>1</sub>∩S<sup>c</sup><sub>2</sub>, S<sup>c</sup>1∩S<sub>2</sub>, and S<sup>c</sup><sub>1</sub>∩S<sup>c</sup><sub>2</sub> are nonempty. As a simple example, consider the conflicting splits {a,b}∣{c,d} and {a,c}∣{b,d} . More generally, given a consistent character table C, an unrooted binary tree T "models" C if the edge splits of T agree with the splits induced from the characters of C.
+- Given:  list of n species (n≤80) and an n-column character table C in which the jth column denotes the jth species.
+- Return: An unrooted binary tree in Newick format that models C.
+- Sample Dataset
+  - Input:
+    cat dog elephant mouse rabbit rat
+    011101
+    001101
+    001100
+  - Output:
+    (dog,(cat,rabbit),(rat,(elephant,mouse)));
+- Extra: Use the file located here: /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/chbp_data.txt as the input data for the algorithm
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
