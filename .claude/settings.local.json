@@ -320,7 +320,18 @@
       "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSiteProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSiteProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSitesResultSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.nucleic.RestrictionSitesAlgoSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.nucleic.RestrictionSitesAlgoSpec\")",
+      "Bash(awk '/^7[0-9]\\\\./{p=1} /^8[0-9]\\\\./{p=1} p' initial-prompt.md)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('OUTPUT:',d.get\\('outputPath'\\)\\); print\\('---TEMPLATE---'\\); print\\(d.get\\('template',''\\)\\); print\\('---INSTRUCTION---'\\); print\\(d.get\\('instruction',''\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('OUT:',d.get\\('outputPath'\\)\\); print\\('---TEMPLATE---'\\); print\\(d.get\\('template',''\\)\\); print\\('---INSTRUCTION---'\\); print\\(d.get\\('instruction',''\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('OUT:',d.get\\('outputPath'\\)\\); print\\(d.get\\('template',''\\)\\); print\\('---INSTRUCTION---'\\); print\\(d.get\\('instruction',''\\)\\)\")",
+      "Bash(python3 -c 'import sys,json; d=json.load\\(sys.stdin\\); print\\('\\\\''STATE:'\\\\'',d.get\\('\\\\''state'\\\\''\\)\\); print\\('\\\\''PROGRESS:'\\\\'',d.get\\('\\\\''progress'\\\\''\\)\\); cf=d.get\\('\\\\''contextFiles'\\\\'',{}\\); *)",
+      "Bash(sbt \"testOnly bio.domain.protein.OpenReadingFrameProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.OpenReadingFrameProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.OpenReadingFramesResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.OpenReadingFramesAlgoSpec\")",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('schema:',d['schemaName']\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")"
     ]
   }
 }

@@ -1175,6 +1175,23 @@ If multiple solutions exist, then you may output any one.
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/revp_data.txt for data input
 - Extra Info: You may be curious how the bacterium prevents its own DNA from being cut by restriction enzymes. The short answer is that it locks itself from being cut through a chemical process called DNA methylation.
 
+76. Open Reading Frames
+- Problem: Either strand of a DNA double helix can serve as the coding strand for RNA transcription. Hence, a given DNA string implies six total reading frames, or ways in which the same region of DNA can be translated into amino acids: three reading frames result from reading the string itself, whereas three more result from reading its reverse complement. An open reading frame (ORF) is one which starts from the start codon and ends by stop codon, without any other stop codons in between. Thus, a candidate protein string is derived by translating an open reading frame into amino acids until a stop codon is reached.
+- Given: A DNA string s of length at most 1 kbp in FASTA format.
+- Return:  Every distinct candidate protein string that can be translated from ORFs of s. Strings can be returned in any order.
+- Sample Dataset
+  - Input
+  >Rosalind_99
+  AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGAATGATCCGAGTAGCATCTCAG
+  - Output
+    MLLGSFRLIPKETLIQVAGSSPCNLS
+    M
+    MGMTPRLGLESLLE
+    MTPRLGLESLLE
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/orf_data.txt for data input
+
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
