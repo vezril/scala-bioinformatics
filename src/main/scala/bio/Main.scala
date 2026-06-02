@@ -78,6 +78,11 @@ object Main extends IOApp {
     //val result = ROOTProb.solve()
     val result = MENDProb.solve()
 
-    result.as(ExitCode.Success)
+    // App-boundary resilience: a runner's effect should print its own errors and never
+    // throw, but if one does escape (e.g. a data file is absent on a CI runner), catch
+    // it here, report it, and still exit cleanly rather than crashing the application.
+    result
+      .handleErrorWith(t => IO.println(s"runner failed: $t"))
+      .as(ExitCode.Success)
   }
 }
