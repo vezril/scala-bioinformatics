@@ -352,7 +352,13 @@
       "Bash(sbt \"testOnly bio.domain.graph.PatternTrieProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.PatternTrieResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.TrieConstructionSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] [0-9]+ [0-9]+ [ACGT]$')"
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+ [0-9]+ [ACGT]$')",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.RestrictionMapProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.RestrictionMapProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.RestrictionMapResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.RestrictionMapConstructionSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+\\( [0-9]+\\)+$')",
+      "Bash(echo \"EXIT=$?\")"
     ]
   }
 }
