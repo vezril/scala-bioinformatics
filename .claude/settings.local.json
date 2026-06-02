@@ -341,7 +341,12 @@
       "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifMatchResultSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.analysis.MatchingRandomMotifsAlgoSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.analysis.MatchingRandomMotifsAlgoSpec\")",
+      "Bash(awk '/^77\\\\./{f=NR} END{print \"77 starts at line\", f, \"of\", NR}' initial-prompt.md)",
+      "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.ExpectedRestrictionSitesAlgoSpec\")"
     ]
   }
 }

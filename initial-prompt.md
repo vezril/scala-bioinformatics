@@ -1202,6 +1202,20 @@ If multiple solutions exist, then you may output any one.
   0.689
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/rstr_data.txt for file input
 
+78. Expected Number of Restriction Sites
+- Problem: Say that you place a number of bets on your favorite sports teams. If their chances of winning are 0.3, 0.8, and 0.6, then you should expect on average to win 0.3 + 0.8 + 0.6 = 1.7 of your bets (of course, you can never win exactly 1.7!). More generally, if we have a collection of events A<sub>1</sub>,A<sub>2</sub>,…,A<sub>n</sub>, then the expected number of events occurring is Pr(A<sub>1</sub>)+Pr(A<sub>2</sub>)+⋯+Pr(A<sub>n</sub>) (consult the note following the problem for a precise explanation of this fact). In this problem, we extend the idea of finding an expected number of events to finding the expected number of times that a given string occurs as a substring of a random string.
+- Given: A positive integer n (n≤1,000,000), a DNA string s of even length at most 10, and an array A of length at most 20, containing numbers between 0 and 1.
+- Return: An array B having the same length as A in which B[i] represents the expected number of times that s will appear as a substring of a random DNA string t of length n, where t is formed with GC-content A[i] (see “Introduction to Random Strings”).
+- Mathematical Details: In this problem, we are speaking of an expected number of events; how can we tie this into the definition of expected value that we already have from “Calculating Expected Offspring”? The answer relies on a slick mathematical trick. For any event A, we can form a random variable for A, called an indicator random variable I<sub>A</sub>. For an outcome x, I<sub>A(</sub>x)=1 when x belongs to A and I<sub>A</sub>(x)=0 when x belongs to A<sub>c</sub>. For an indicator random variable I<sub>A</sub>(x)=1, verify that E(I<sub>A</sub>)=Pr(A). You should also verify from our original formula for expected value that for any two random variables X and Y, E(X+Y) is equal to E(X)+E(Y). As a result, the expected number of events A<sub>1</sub>,A<sub>2</sub>,…,A<sub>m</sub> occurring, or E(I<sub>A1</sub>+I<sub>A2</sub>+⋯+I<sub>Am</sub>), reduces to Pr(A<sub>1</sub>)+Pr(A<sub>2</sub>)+⋯+Pr(A<sub>m</sub>).
+- Sample Dataset
+  - Input
+    10
+    AG
+    0.25 0.5 0.75
+  - Output
+    0.422 0.563 0.422
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/eval_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
