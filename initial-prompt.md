@@ -1377,6 +1377,19 @@ If multiple solutions exist, then you may output any one.
     0.18 0.5 0.32
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/sexl_data.txt for data input
 
+88. Identifying Maximal Repeats
+- Problem: A maximal repeat of a string s is a repeated substring t of s having two occurrences t<sub>1</sub> and <sub>t2</sub> such that <sub>t1</sub> and t<sub>2</sub> cannot be extended by one symbol in either direction in s and still agree. For example, "AG" is a maximal repeat in "TAGTTAGCGAGA" because even though the first two occurrences of "AG" can be extended left into "TAG", the first and third occurrences differ on both sides of the repeat; thus, we conclude that "AG" is a maximal repeat. Note that "TAG" is also a maximal repeat of "TAGTTAGCGAGA", since its only two occurrences do not still match if we extend them in either direction.
+- Given: A DNA string s of length at most 1 kbp.
+- Return: A list containing all maximal repeats of s having length at least 20.
+- Sample Dataset:
+  - Input
+    TAGAGATAGAATGGGTCCAGAGTTTTGTAATTTCCATGGGTCCAGAGTTTTGTAATTTATTATATAGAGATAGAATGGGTCCAGAGTTTTGTAATTTCCATGGGTCCAGAGTTTTGTAATTTAT
+  - Output
+    TAGAGATAGAATGGGTCCAGAGTTTTGTAATTTCCATGGGTCCAGAGTTTTGTAATTTAT
+    ATGGGTCCAGAGTTTTGTAATTT
+- Hint: How can we use the suffix tree of s to find maximal repeats?
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mrep_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
