@@ -61,7 +61,9 @@ object Main extends IOApp {
     //val result = ASMQProb.solve()
     //val result = OAPProb.solve()
     //val result = GREPProb.solve()
-    val result = SMGBProb.solve()
+    //val result = SMGBProb.solve()
+    val result = SPECProb.solve()
+    //val result = PRTMProb.solve()
 
     result.as(ExitCode.Success)
   }

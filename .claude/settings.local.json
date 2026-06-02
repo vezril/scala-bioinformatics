@@ -287,7 +287,26 @@
       "Bash(sbt \"testOnly bio.domain.analysis.SemiglobalAlignmentProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.SemiglobalAlignmentSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.SemiglobalAlignmentAlgoSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[ACGT-]+\\)$')"
+      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[ACGT-]+\\)$')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('progress', d['progress']\\); print\\('schema', d['schemaName']\\)\")",
+      "Bash(sbt \"testOnly bio.domain.protein.AminoAcidSpec\")",
+      "Bash(python3 -)",
+      "Bash(sbt \"testOnly bio.domain.protein.PrefixSpectrumErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.PrefixSpectrumSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.InferredProteinSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.InferProteinFromSpectrumSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [A-Z]+$')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('schema',d['schemaName']\\); print\\('artifacts', [\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('applyRequires', d['applyRequires']\\); print\\([\\(a['id'],a['status']\\) for a in d['artifacts']]\\)\")",
+      "Bash(sbt \"testOnly bio.domain.protein.ProteinMassProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.ProteinMassProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.ProteinMassSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.ProteinMassAlgoSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+\\\\.[0-9]+$')",
+      "Bash(sbt \"testOnly bio.algorithms.protein.* bio.domain.protein.*\")",
+      "Bash(sbt \"console\")",
+      "Bash(grep -E '^\\\\[info\\\\] [A-Z]{20,}')",
+      "Bash(grep -v '^archive$')"
     ]
   }
 }

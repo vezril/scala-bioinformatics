@@ -38,4 +38,28 @@ class AminoAcidSpec extends AnyFunSpec with Matchers {
       actualCodes shouldBe expectedCodes
     }
   }
+
+  describe("AminoAcid monoisotopic masses") {
+    it("reports the canonical monoisotopic mass of a residue") {
+      AminoAcid.W.monoisotopicMass shouldBe 186.07931
+    }
+
+    it("matches a difference to the nearest residue (Q over K)") {
+      AminoAcid.closestByMass(128.0586) shouldBe AminoAcid.Q
+    }
+
+    it("breaks the isobaric I/L tie deterministically by canonical order (L first)") {
+      AminoAcid.closestByMass(113.08406) shouldBe AminoAcid.L
+    }
+  }
+
+  describe("AminoAcid.fromChar") {
+    it("lifts a valid single-letter code to its residue") {
+      AminoAcid.fromChar('W') shouldBe Some(AminoAcid.W)
+    }
+
+    it("returns None for a non-amino-acid character") {
+      AminoAcid.fromChar('B') shouldBe None
+    }
+  }
 }
