@@ -31,6 +31,9 @@ jobs:
       uses: sbt/setup-sbt@v1
     - name: Run tests
       run: sbt test
-      # Optional: This step uploads information to the GitHub dependency graph and unblocking Dependabot alerts for the repository
+      # Optional: This step uploads information to the GitHub dependency graph and unblocking Dependabot alerts for the repository.
+      # Marked continue-on-error because the dependency-submission API needs `contents: write`; on read-only tokens it returns 403,
+      # and this optional step must not fail the build (whose purpose is running the tests above).
     - name: Upload dependency graph
+      continue-on-error: true
       uses: scalacenter/sbt-dependency-submission@ab086b50c947c9774b70f39fc7f6e20ca2706c91
