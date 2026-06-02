@@ -373,7 +373,8 @@
       "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesResultSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.EnumerateUnrootedBinaryTreesSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.EnumerateUnrootedBinaryTreesSpec\")",
+      "Bash(awk 'NR>=1312 && /^[0-9]+\\\\. /{print NR\": \"$0}' initial-prompt.md)"
     ]
   }
 }

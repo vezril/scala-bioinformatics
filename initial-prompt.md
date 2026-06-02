@@ -1346,6 +1346,15 @@ If multiple solutions exist, then you may output any one.
     (((elephant,cat),mouse))dog;
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/eubt_data.txt for data input
 
+85. Counting Rooted Binary Trees
+- Problem: As in the case of unrooted trees, say that we have a fixed collection of n taxa labeling the leaves of a rooted binary tree T. You may like to verify that (by extension of “Counting Phylogenetic Ancestors”) such a tree will contain n−1 internal nodes and 2n−2 total edges. Any edge will still encode a split of taxa; however, the two splits corresponding to the edges incident to the root of T will be equal. We still consider two trees to be equivalent if they have the same splits (which requires that they must also share the same duplicated split to be equal). Let B(n) represent the total number of distinct rooted binary trees on n labeled taxa.
+- Given: A positive integer n (n≤1000).
+- Return: The value of B(n) modulo 1,000,000.
+- Sample Dataset
+  - Input: 4
+  - Output: 15
+- Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/root_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
