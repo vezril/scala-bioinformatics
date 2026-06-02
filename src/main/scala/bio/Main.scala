@@ -68,7 +68,8 @@ object Main extends IOApp {
     //val result = REVPProb.solve()
     //val result = ORFProb.solve()
     //val result = RSTRProb.solve()
-    val result = EVALProb.solve()
+    //val result = EVALProb.solve()
+    val result = TRIEProb.solve()
 
     result.as(ExitCode.Success)
   }

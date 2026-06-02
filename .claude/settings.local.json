@@ -346,7 +346,13 @@
       "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.ExpectedRestrictionSitesResultSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.analysis.ExpectedRestrictionSitesAlgoSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.analysis.ExpectedRestrictionSitesAlgoSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.TrieEdgeSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.PatternTrieProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.PatternTrieProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.PatternTrieResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.TrieConstructionSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+ [0-9]+ [ACGT]$')"
     ]
   }
 }
