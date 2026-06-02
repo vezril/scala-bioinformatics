@@ -1283,6 +1283,32 @@ If multiple solutions exist, then you may output any one.
 - Hint: How can repeated substrings of s be located in T(s)?
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/lrep_data.txt for data input
 
+82. Encoding Suffix Trees
+- Problem: Given a string s having length n, recall that its suffix tree T(s) is defined by the following properties:
+  - T(s) is a rooted tree having exactly n leaves. 
+  - Every edge of T(s) is labeled with a substring of s<sup>∗</sup>, where s<sup>∗</sup> is the string formed by adding a placeholder symbol $ to the end of s.
+  - Every internal node of T(s) other than the root has at least two children; i.e., it has degree at least 3.
+  - The substring labels for the edges leading down from a node to its children must begin with different symbols.
+  - By concatenating the substrings along edges, each path from the root to a leaf corresponds to a unique suffix of s<sup>∗</sup>.
+- Given: A DNA string s of length at most 1kbp
+- Return: The substrings of s<sup>∗</sup> encoding the edges of the suffix tree for s. You may list these substrings in any order.
+- Sample Dataset
+  - Input: ATAAATG$
+  - Output
+    AAATG$
+    G$
+    T
+    ATG$
+    TG$
+    A
+    A
+    AAATG$
+    G$
+    T
+    G$
+    $
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/suff_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

@@ -362,7 +362,12 @@
       "Bash(sbt \"testOnly bio.domain.graph.SuffixTreeEdgeSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.LongestRepeatProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.LongestRepeatProblemSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.LongestMultipleRepeatSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.LongestMultipleRepeatSpec\")",
+      "Bash(awk 'NR>=1249 && /^[0-9]+\\\\. /{print NR\": \"$0}' initial-prompt.md)",
+      "Bash(gh run *)",
+      "Bash(git -C /Users/cference/Code/scala-bioinformatics status)",
+      "Bash(git -C /Users/cference/Code/scala-bioinformatics log --oneline -5)",
+      "Bash(curl -s \"https://api.github.com/repos/vezril/scala-bioinformatics/actions/runs?per_page=10\")"
     ]
   }
 }
