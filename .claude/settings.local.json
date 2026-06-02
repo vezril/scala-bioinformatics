@@ -368,7 +368,12 @@
       "Bash(git -C /Users/cference/Code/scala-bioinformatics status)",
       "Bash(git -C /Users/cference/Code/scala-bioinformatics log --oneline -5)",
       "Bash(curl -s \"https://api.github.com/repos/vezril/scala-bioinformatics/actions/runs?per_page=10\")",
-      "Bash(sbt \"testOnly bio.domain.analysis.LinguisticComplexityProblemSpec\")"
+      "Bash(sbt \"testOnly bio.domain.analysis.LinguisticComplexityProblemSpec\")",
+      "Bash(awk '{print NF\" tokens\"}')",
+      "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.UnrootedBinaryTreesResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.EnumerateUnrootedBinaryTreesSpec\")"
     ]
   }
 }

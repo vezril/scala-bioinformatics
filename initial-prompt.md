@@ -1333,6 +1333,19 @@ If multiple solutions exist, then you may output any one.
 - Hint: Why does this problem follow “Encoding Suffix Trees”?
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/ling_data.txt for data input
 
+84. Enumerating Unrooted Binary Trees
+- Problem: Recall the definition of Newick format from “Distances in Trees” as a way of encoding trees. See Figure 1 for an example of Newick format applied to an unrooted binary tree whose five leaves are labeled (note that the same tree can have multiple Newick representations).
+- Given: A collection of species names representing n taxa.
+- Return: A list containing all unrooted binary trees whose leaves are these n taxa. Trees should be given in Newick format, with one tree on each line; the order of the trees is unimportant.
+- Sample Dataset
+  - Input
+    dog cat mouse elephant
+  - Output
+    (((mouse,cat),elephant))dog;
+    (((elephant,mouse),cat))dog;
+    (((elephant,cat),mouse))dog;
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/eubt_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
@@ -1342,3 +1355,4 @@ Constraints / non-goals:
 - Functional Programming highly desired over imperative style
 - Scala Best practices encouraged
 - Usage of ADTs for Domain types are a must 
+

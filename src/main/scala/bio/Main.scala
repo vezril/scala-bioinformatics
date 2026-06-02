@@ -73,7 +73,8 @@ object Main extends IOApp {
     //val result = PDPLProb.solve()
     //val result = LREPProb.solve()
     //val result = SUFFProb.solve()
-    val result = LINGProb.solve()
+    //val result = LINGProb.solve()
+    val result = EUBTProb.solve()
 
     result.as(ExitCode.Success)
   }
