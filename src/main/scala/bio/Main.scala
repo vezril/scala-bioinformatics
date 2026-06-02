@@ -75,7 +75,8 @@ object Main extends IOApp {
     //val result = SUFFProb.solve()
     //val result = LINGProb.solve()
     //val result = EUBTProb.solve()
-    val result = ROOTProb.solve()
+    //val result = ROOTProb.solve()
+    val result = MENDProb.solve()
 
     result.as(ExitCode.Success)
   }

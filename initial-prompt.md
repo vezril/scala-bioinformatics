@@ -1355,6 +1355,17 @@ If multiple solutions exist, then you may output any one.
   - Output: 15
 - Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/root_data.txt for data input
 
+86. Inferring GEnotype from a Pedigree
+- Problem: A rooted binary tree can be used to model the pedigree of an individual. In this case, rather than time progressing from the root to the leaves, the tree is viewed upside down with time progressing from an individual's ancestors (at the leaves) to the individual (at the root). An example of a pedigree for a single factor in which only the genotypes of ancestors are given is shown in Figure 1.
+- Given: A rooted binary tree T in Newick format encoding an individual's pedigree for a Mendelian factor whose alleles are A (dominant) and a (recessive).
+- Return: Three numbers between 0 and 1, corresponding to the respective probabilities that the individual at the root of T will exhibit the "AA", "Aa" and "aa" genotypes.
+- Sample Dataset
+  - Input
+    ((((Aa,aa),(Aa,Aa)),((aa,aa),(aa,AA))),Aa);
+  - Output
+    0.156 0.5 0.344
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mend_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
