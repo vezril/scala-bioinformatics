@@ -306,7 +306,17 @@
       "Bash(sbt \"testOnly bio.algorithms.protein.* bio.domain.protein.*\")",
       "Bash(sbt \"console\")",
       "Bash(grep -E '^\\\\[info\\\\] [A-Z]{20,}')",
-      "Bash(grep -v '^archive$')"
+      "Bash(grep -v '^archive$')",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('OUTPUT:',d.get\\('outputPath'\\)\\); print\\('---TEMPLATE---'\\); print\\(d.get\\('template',''\\)\\); print\\('---INSTRUCTION---'\\); print\\(d.get\\('instruction',''\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('complete:',d['isComplete']\\); [print\\(' ',a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('state:',d.get\\('state'\\)\\); p=d.get\\('progress',{}\\); print\\('progress:',p\\)\")",
+      "Bash(sbt \"testOnly bio.domain.protein.MassMultisetErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.MassMultisetSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.SpectralConvolutionProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.SpectralConvolutionResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.protein.SpectralConvolutionAlgoSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[0-9.]+\\)$')"
     ]
   }
 }

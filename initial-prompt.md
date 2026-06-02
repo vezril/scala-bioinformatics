@@ -1150,5 +1150,16 @@ Constraints / non-goals:
   - Output: 821.392
 - Extra: Use for /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/prtm_data.txt input data
 
-
-
+74. Comparing Spectra with the Spectral Convolution
+- Problem: A multiset is a generalization of the notion of set to include a collection of objects in which each object may occur more than once (the order in which objects are given is still unimportant). For a multiset S , the multiplicity of an element x is the number of times that x occurs in the set; this multiplicity is denoted S(x). Note that every set is included in the definition of multiset. The Minkowski sum of multisets S<sub>1</sub> and S<sub>2</sub> containing real numbers is the new multiset S<sub>1</sub>⊕S<sub>2</sub> formed by taking all possible sums s<sub>1</sub>+s<sub>2</sub> of an element s<sub>1</sub> from S<sub>1</sub> and an element s<sub>2</sub> from S<sub>2</sub>. The Minkowski sum could be defined more concisely as S<sub>1</sub>⊕S<sub>2</sub>=s<sub>1</sub>+s<sub>2</sub>:s<sub>1</sub>∈S<sub>1</sub>, s2∈S2, The Minkowski difference S<sub>1</sub>⊖S<sub>2</sub> is defined analogously by taking all possible differences s<sub>1</sub>−s<sub>2</sub>. If S<sub>1</sub> and S<sub>2</sub> represent simplified spectra taken from two peptides, then S<sub>1</sub>⊖S<sub>2</sub> is called the spectral convolution of S<sub>1</sub> and S<sub>2</sub>. In this notation, the shared peaks count is represented by (S<sub>2</sub>⊖S<sub>1</sub>)(0), and the value of x for which (S<sub>2</sub>⊖S<sub>1</sub>)(x) has the maximal value is the shift value maximizing the number of shared masses of S<sub>1</sub> and S<sub>2</sub>.
+- Given: Two multisets of positive real numbers S<sub>1</sub> and S<sub>2</sub>. The size of each multiset is at most 200.
+- Return: The largest multiplicity of S<sub>1</sub>⊖S<sub>2</sub>, as well as the absolute value of the number x maximizing (S<sub>1</sub>⊖S<sub>2</sub>)(x) (you may return any such value if multiple solutions exist).
+- Sample Dataset:
+  - Input
+    186.07931 287.12699 548.20532 580.18077 681.22845 706.27446 782.27613 968.35544 968.35544
+    101.04768 158.06914 202.09536 318.09979 419.14747 463.17369
+  - Output:
+    3
+    85.03163
+- Note: Observe that S<sub>1</sub>⊕S<sub>2</sub> is equivalent to S<sub>2</sub>⊕S<sub>1</sub>, but it is not usually the case that S<sub>1</sub>⊖S<sub>2</sub> is the same as S<sub>2</sub>⊖S<sub>1</sub>; in this case, one multiset can be obtained from the other by negating every element.
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/conv_data.txt for data input
