@@ -1246,6 +1246,43 @@ If multiple solutions exist, then you may output any one.
   - Output: 0 2 4 7 10
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/pdpl_data.txt for data input
 
+81. Finding the Longest Multiple Repeat
+- Problem: A repeated substring of a string s of length n is simply a substring that appears in more than one location of s; more specifically, a k-fold substring appears in at least k distinct locations. The suffix tree of s, denoted T(s), is defined as follows:
+  - T(s) is a rooted tree having exactly n leaves. 
+  - Every edge of T(s) is labeled with a substring of s<sup>∗</sup>, where s<sup>∗</sup> is the string formed by adding a placeholder symbol $ to the end of s.
+  - Every internal node of T(s) other than the root has at least two children; i.e., it has degree at least 3.
+  - The substring labels for the edges leading from a node to its children must begin with different symbols.
+  - By concatenating the substrings along edges, each path from the root to a leaf corresponds to a unique suffix of s<sup>∗</sup>.
+- Given: A DNA string s (of length at most 20 kbp) with $ appended, a positive integer k, and a list of edges defining the suffix tree of s. Each edge is represented by four components:
+  - the label of its parent node in T(s);
+  - the label of its child node in T(s);
+  - the location of the substring t of s∗ assigned to the edge; and 
+  - the length of t
+- Return: The longest substring of s that occurs at least k times in s. (If multiple solutions exist, you may return any single solution.)
+- Sample Dataset
+  - Input
+    CATACATAC$
+    2
+    node1 node2 1 1
+    node1 node7 2 1
+    node1 node14 3 3
+    node1 node17 10 1
+    node2 node3 2 4
+    node2 node6 10 1
+    node3 node4 6 5
+    node3 node5 10 1
+    node7 node8 3 3
+    node7 node11 5 1
+    node8 node9 6 5
+    node8 node10 10 1
+    node11 node12 6 5
+    node11 node13 10 1
+    node14 node15 6 5
+    node14 node16 10 1
+  - Output: CATAC
+- Hint: How can repeated substrings of s be located in T(s)?
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/lrep_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

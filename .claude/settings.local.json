@@ -358,7 +358,11 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.RestrictionMapResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.RestrictionMapConstructionSpec\")",
       "Bash(grep -E '^\\\\[info\\\\] [0-9]+\\( [0-9]+\\)+$')",
-      "Bash(echo \"EXIT=$?\")"
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(sbt \"testOnly bio.domain.graph.SuffixTreeEdgeSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.LongestRepeatProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.LongestRepeatProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.LongestMultipleRepeatSpec\")"
     ]
   }
 }
