@@ -280,7 +280,14 @@
       "Bash(sbt \"testOnly bio.domain.graph.CompleteCycleProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.CompleteCycleAssembliesSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.graph.CompleteCycleAssemblySpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] CAG[ACGT]+$')"
+      "Bash(grep -E '^\\\\[info\\\\] CAG[ACGT]+$')",
+      "Bash(awk '/^71\\\\./{f=1} f{print} /^72\\\\./{if\\(seen\\)exit; seen=1}' /Users/cference/Code/scala-bioinformatics/initial-prompt.md)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('applyRequires:', d['applyRequires']\\); [print\\(' ', a['id'], a['status']\\) for a in d['artifacts']]\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SemiglobalAlignmentProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SemiglobalAlignmentProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SemiglobalAlignmentSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.SemiglobalAlignmentAlgoSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[ACGT-]+\\)$')"
     ]
   }
 }

@@ -1079,6 +1079,21 @@ If multiple solutions exist, then you may output any one.
     CAGTTGGCGTTTCAATT
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/grep_data.txt as the input data for the problem
 
+71. Semiglobal Alignment
+- Problem: A semiglobal alignment of strings s and t is an alignment in which any gaps appearing as prefixes or suffixes of s and t do not contribute to the alignment score. Semiglobal alignment has sometimes also been called "overlap alignment". Rosalind defines overlap alignment differently (see “Overlap Alignment”).
+- Given: Two DNA strings s and t in FASTA format, each having length at most 10 kbp.
+- Return: The maximum semiglobal alignment score of s and t, followed by an alignment of s and t achieving this maximum score. Use an alignment score in which matching symbols count +1, substitutions count -1, and there is a linear gap penalty of 1. If multiple optimal alignments exist, then you may return any one.
+- Sample Dataset:
+  - Input
+  >Rosalind_79
+  CAGCACTTGGATTCTCGG
+  >Rosalind_98
+  CAGCGTGG
+  - Output:
+    4
+    CAGCA-CTTGGATTCTCGG
+    ---CAGCGTGG--------
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/smgb_data.txt for data input
 
 Constraints / non-goals:
 - No auth/roles (for now)
