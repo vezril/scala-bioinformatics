@@ -57,7 +57,8 @@ object Main extends IOApp {
     //val result = KMERProb.solve()
     //val result = DBRUProb.solve()
     //val result = PCOVProb.solve()
-    val result = GASMProb.solve()
+    //val result = GASMProb.solve()
+    val result = ASMQProb.solve()
 
     result.as(ExitCode.Success)
   }

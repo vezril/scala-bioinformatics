@@ -259,7 +259,12 @@
       "Bash(grep -E '^\\\\[info\\\\] [ACGT]+$')",
       "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyReadsProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.graph.GenomeAssemblyReadsProblemSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.graph.GenomeAssemblyReadsSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.graph.GenomeAssemblyReadsSpec\")",
+      "Bash(sbt \"testOnly bio.domain.assembly.ContigCollectionErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.assembly.ContigCollectionSpec\")",
+      "Bash(sbt \"testOnly bio.domain.assembly.AssemblyQualitySpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.assembly.AssemblyStatisticsSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+ [0-9]+$')"
     ]
   }
 }

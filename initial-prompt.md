@@ -1016,6 +1016,21 @@ If multiple solutions exist, then you may output any one.
 - Note: The reads "AATCT" and "TGTAA" are not present in the answer, but their reverse complements "AGATT" and "TTACA" are present in the circular string (GATTACA).
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/gasm_data.txt as the file input for data, to solve the algorithm
 
+68. Assessing Assembly Quality with N50 and N75
+- Problem: Given a collection of DNA strings representing contigs, we use the N statistic NXX (where XX ranges from 01 to 99) to represent the maximum positive integer L such that the total number of nucleotides of all contigs having length ≥L is at least XX% of the sum of contig lengths. The most commonly used such statistic is N50, although N75 is also worth mentioning.
+- Given: A collection of at most 1000 DNA strings (whose combined length does not exceed 50 kbp).
+- Return: N50 and N75 for this collection of strings.
+- Sample Dataset:
+  - Input
+    GATTACA
+    TACTACTAC
+    ATTGAT
+    GAAGA
+  - Output:
+    7 6
+- Extra Info: For an explanation of the results obtained in the sample above, contigs of length at least 7 total 7 + 9 = 16 bp, which is more than 50% of the total 27). Contigs of length at least 8 total only 9 bp (less than 50%). Contigs of length at least 6 total 6 + 7 + 9 = 22 bp, which is more than 75% of all base pairs. Contigs of length at least 7 total only 16 bp (less than 75%).
+- Extra: Use this file /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/asmq_data.txt to ingest the data to solve the algorithm
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
