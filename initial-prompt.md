@@ -1047,6 +1047,38 @@ If multiple solutions exist, then you may output any one.
     AT-AGACCAT
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/oap_data.txt for the input data like in the previous problems
 
+70. Genome Assembly with Perfect Coverage and Repeats
+- Problem: Recall that a directed cycle is a cycle in a directed graph in which the head of one edge is equal to the tail of the following edge. In a de Bruijn graph of k-mers, a circular string s is constructed from a directed cycle s<sub>1</sub>→s<sub>2</sub>→...→s<sub>i</sub>→s<sub>1</sub> is given by s<sub>1</sub>+s<sub>2</sub>[k]+...+s<sub>i−k</sub>[k]+s<sub>i−k+1</sub>[k]. That is, because the final k−1 symbols of s<sub>1</sub> overlap with the first k−1 symbols of s<sub>2</sub>, we simply tack on the k-th symbol of s<sub>2</sub> to s, then iterate the process. For example, the circular string assembled from the cycle "AC" → "CT" → "TA" → "AC" is simply (ACT). Note that this string only has length three because the 2-mers "wrap around" in the string. If every k-mer in a collection of reads occurs as an edge in a de Bruijn graph cycle the same number of times as it appears in the reads, then we say that the cycle is "complete."
+- Given: A list S<sub>k+1</sub> of error-free DNA (k+1)-mers (k≤5) taken from the same strand of a circular chromosome (of length ≤50).
+- Return: All circular strings assembled by complete cycles in the de Bruijn graph B<sub>k</sub> of S<sub>k+1</sub>. The strings may be given in any order, but each one should begin with the first (k+1)-mer provided in the input.
+- Sample Dataset
+  - Input
+    CAG
+    AGT
+    GTT
+    TTT
+    TTG
+    TGG
+    GGC
+    GCG
+    CGT
+    GTT
+    TTC
+    TCA
+    CAA
+    AAT
+    ATT
+    TTC
+    TCA
+  - Output
+    CAGTTCAATTTGGCGTT
+    CAGTTCAATTGGCGTTT
+    CAGTTTCAATTGGCGTT
+    CAGTTTGGCGTTCAATT
+    CAGTTGGCGTTCAATTT
+    CAGTTGGCGTTTCAATT
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/grep_data.txt as the input data for the problem
+
 
 Constraints / non-goals:
 - No auth/roles (for now)
