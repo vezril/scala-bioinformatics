@@ -1095,15 +1095,6 @@ If multiple solutions exist, then you may output any one.
     ---CAGCGTGG--------
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/smgb_data.txt for data input
 
-Constraints / non-goals:
-- No auth/roles (for now)
-- This is a framework, so no UI
-- Provide Given/When/Then acceptance criteria with at least 2 edge cases per feature.
-- Use SBT for building the project.
-- Use the IO Monad for side effects
-- Functional Programming highly desired over imperative style
-- Scala Best practices encouraged
-- Usage of ADTs for Domain types are a must 
 
 72. Inferring Protein from Spectrum
 - Problem: The prefix spectrum of a weighted string is the collection of all its prefix weights.
@@ -1163,3 +1154,33 @@ Constraints / non-goals:
     85.03163
 - Note: Observe that S<sub>1</sub>⊕S<sub>2</sub> is equivalent to S<sub>2</sub>⊕S<sub>1</sub>, but it is not usually the case that S<sub>1</sub>⊖S<sub>2</sub> is the same as S<sub>2</sub>⊖S<sub>1</sub>; in this case, one multiset can be obtained from the other by negating every element.
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/conv_data.txt for data input
+
+75. Locating Restriction Sites
+- Problem: A DNA string is a reverse palindrome if it is equal to its reverse complement. For instance, GCATGC is a reverse palindrome because its reverse complement is GCATGC.
+- Given: A DNA string of length at most 1 kbp in FASTA format.
+- Return: The position and length of every reverse palindrome in the string having length between 4 and 12. You may return these pairs in any order.
+- Sample Dataset
+  - Input
+  >Rosalind_24
+  TCAATGCATGCGGGTCTATATGCAT
+  - Output
+    4 6
+    5 4
+    6 6
+    7 4
+    17 4
+    18 4
+    20 6
+    21 4
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/revp_data.txt for data input
+- Extra Info: You may be curious how the bacterium prevents its own DNA from being cut by restriction enzymes. The short answer is that it locks itself from being cut through a chemical process called DNA methylation.
+
+Constraints / non-goals:
+- No auth/roles (for now)
+- This is a framework, so no UI
+- Provide Given/When/Then acceptance criteria with at least 2 edge cases per feature.
+- Use SBT for building the project.
+- Use the IO Monad for side effects
+- Functional Programming highly desired over imperative style
+- Scala Best practices encouraged
+- Usage of ADTs for Domain types are a must 

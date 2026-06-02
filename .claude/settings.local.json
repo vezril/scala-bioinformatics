@@ -316,7 +316,11 @@
       "Bash(sbt \"testOnly bio.domain.protein.SpectralConvolutionProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.SpectralConvolutionResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.SpectralConvolutionAlgoSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[0-9.]+\\)$')"
+      "Bash(grep -E '^\\\\[info\\\\] \\([0-9]+|[0-9.]+\\)$')",
+      "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSiteProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSiteProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.nucleic.RestrictionSitesResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.nucleic.RestrictionSitesAlgoSpec\")"
     ]
   }
 }
