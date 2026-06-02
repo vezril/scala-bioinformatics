@@ -331,7 +331,17 @@
       "Bash(sbt \"testOnly bio.domain.protein.OpenReadingFrameProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.OpenReadingFramesResultSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.protein.OpenReadingFramesAlgoSpec\")",
-      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('schema:',d['schemaName']\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")"
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('schema:',d['schemaName']\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(awk '/^77\\\\./{p=1} /^78\\\\./{p=0} p' initial-prompt.md)",
+      "Bash(awk '/^77\\\\./{p=1} p' initial-prompt.md)",
+      "Bash(xargs -I {} basename {})",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('applyRequires:',d['applyRequires']\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('STATE:',d.get\\('state'\\)\\);print\\('PROGRESS:',d.get\\('progress'\\)\\)\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.RandomMotifMatchResultSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.MatchingRandomMotifsAlgoSpec\")"
     ]
   }
 }
