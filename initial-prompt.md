@@ -1031,6 +1031,23 @@ If multiple solutions exist, then you may output any one.
 - Extra Info: For an explanation of the results obtained in the sample above, contigs of length at least 7 total 7 + 9 = 16 bp, which is more than 50% of the total 27). Contigs of length at least 8 total only 9 bp (less than 50%). Contigs of length at least 6 total 6 + 7 + 9 = 22 bp, which is more than 75% of all base pairs. Contigs of length at least 7 total only 16 bp (less than 75%).
 - Extra: Use this file /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/asmq_data.txt to ingest the data to solve the algorithm
 
+69. Overlap Alignment
+- Problem: An overlap alignment between two strings s and t is a local alignment of a suffix of s with a prefix of t. An optimal overlap alignment will therefore maximize an alignment score over all such substrings of s and t. The term "overlap alignment" has also been used to describe what Rosalind defines as a semiglobal alignment. See “Semiglobal Alignment” for details.
+- Given: Two DNA strings s and t in FASTA format, each having length at most 10 kbp.
+- Return: The score of an optimal overlap alignment of s and t, followed by an alignment of a suffix s′ of s and a prefix t′ of t achieving this optimal score. Use an alignment score in which matching symbols count +1, substitutions count -2, and there is a linear gap penalty of 2. If multiple optimal alignments exist, then you may return any one.
+- Sample Dataset:
+  - Input
+  >Rosalind_54
+  CTAAGGGATTCCGGTAATTAGACAG
+  >Rosalind_45
+  ATAGACCATATGTCAGTGACTGTGTAA
+  - Output:
+    1
+    ATTAGAC-AG
+    AT-AGACCAT
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/oap_data.txt for the input data like in the previous problems
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
