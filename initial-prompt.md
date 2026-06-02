@@ -1309,6 +1309,30 @@ If multiple solutions exist, then you may output any one.
     $
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/suff_data.txt for data input
 
+83. Linguistic Complexity of a Genome
+- Problem: Given a length n string s formed over an alphabet 𝒜 of size a, let the "substring count" sub(s) denote the total number of distinct substrings of s. Furthermore, let the "maximum substring count" m(a,n)denote the maximum number of distinct substrings that could appear in a string of length n formed over 𝒜. The linguistic complexity of s (written lc(s)) is equal to sub(s)/m(a,n); in other words, lc(s) represents the percentage of observed substrings of s to the total number that are theoretically possible. Note that 0<lc(s)<1, with smaller values of lc(s) indicating that s is more repetitive. As an example, consider the DNA string (a=4) s=ATTTGGATT. In the following table, we demonstrate that lc(s)=35/40=0.875 by considering the number of observed and possible length k substrings of s, which are denoted by sub<sub>k</sub>(s)and m(a,k,n), respectively. (Observe that m(a,n)=∑<sup>n</sup><sub>k=1</sub>m(a,k,n)=40 and sub(s)=∑<sup>n</sup><sub>k=1</sub>sub<sub>k</sub>(s)=35.)
+
+|k|subk(s)|m(a,k,n)|
+|---|---|---|
+|1|	3|	4|
+|2|	5|	8|
+|3|	6|	7|
+|4|	6|	6|
+|5|	5|	5|
+|6|	4|	4|
+|7|	3|	3|
+|8|	2|	2|
+|9|	1|	1|
+|Total|	35|	40|
+
+- Given: A DNA string s of length at most 100 kbp.
+- Return: The linguistic complexity lc(s)
+- Sample Dataset
+  - Input: ATTTGGATT
+  - Output: 0.875
+- Hint: Why does this problem follow “Encoding Suffix Trees”?
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/ling_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
