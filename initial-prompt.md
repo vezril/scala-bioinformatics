@@ -1390,6 +1390,21 @@ If multiple solutions exist, then you may output any one.
 - Hint: How can we use the suffix tree of s to find maximal repeats?
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mrep_data.txt for data input
 
+89. Maximizing the Gap Symbols of an Optimal Alignment
+- Problem: For the computation of an alignment score generalizing the edit alignment score, let m denote the score assigned to matched symbols, d denote the score assigned to mismatched non-gap symbols, and g denote the score assigned a symbol matched to a gap symbol '-' (i.e., g is a linear gap penalty).
+- Given: Two DNA strings s and t in FASTA format (each of length at most 5000 bp).
+- Return: The maximum number of gap symbols that can appear in any maximum score alignment of s and t with score parameters satisfying m>0 , d<0 , and g<0 .
+- Sample Dataset
+  - Input
+  >Rosalind_92
+  AACGTA
+  >Rosalind_47
+  ACACCTA
+  - Output: 3
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mgap_data.txt for data input
+
+
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

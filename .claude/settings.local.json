@@ -376,7 +376,8 @@
       "Bash(sbt \"testOnly bio.algorithms.graph.EnumerateUnrootedBinaryTreesSpec\")",
       "Bash(awk 'NR>=1312 && /^[0-9]+\\\\. /{print NR\": \"$0}' initial-prompt.md)",
       "Bash(sbt \"testOnly bio.domain.genetics.SexLinkedProblemSpec\")",
-      "Bash(awk 'NR>=1358 && /^[0-9]+\\\\. /{print NR\": \"$0}' initial-prompt.md)"
+      "Bash(awk 'NR>=1358 && /^[0-9]+\\\\. /{print NR\": \"$0}' initial-prompt.md)",
+      "Bash(sbt \"testOnly bio.domain.analysis.MaxGapProblemErrorSpec\")"
     ]
   }
 }
