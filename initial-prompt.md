@@ -1637,6 +1637,60 @@ If multiple solutions exist, then you may output any one.
     TTTCC->TTTCA
 - Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/corr_data.txt for data input
 
+103. Ordering Strings of Varying Length Lexicographically
+- Problem: Say that we have strings s=s1s2⋯sm and t=t1t2⋯tn with m<n . Consider the substring t′=t[1:m]. We have two cases:
+  1. If s=t′ , then we set s<Lext because s is shorter than t (e.g., APPLE<APPLET). 
+  2. Otherwise, s≠t′ . We define s<Lext if s<Lext′ and define s>Lext if s>Lext′(e.g., APPLET<LexARTS because APPL<LexARTS).
+- Given: A permutation of at most 12 symbols defining an ordered alphabet 𝒜 and a positive integer n (n≤4).
+- Return: All strings of length at most n
+  formed from 𝒜, ordered lexicographically. (Note: As in “Enumerating k-mers Lexicographically”, alphabet order is based on the order in which the symbols are given.)
+- Sample Dataset:
+  - Input
+    D N A
+    3
+  - Output
+    D
+    DD
+    DDD
+    DDN
+    DDA
+    DN
+    DND
+    DNN
+    DNA
+    DA
+    DAD
+    DAN
+    DAA
+    N
+    ND
+    NDD
+    NDN
+    NDA
+    NN
+    NND
+    NNN
+    NNA
+    NA
+    NAD
+    NAN
+    NAA
+    A
+    AD
+    ADD
+    ADN
+    ADA
+    AN
+    AND
+    ANN
+    ANA
+    AA
+    AAD
+    AAN
+    AAA
+- Extra Info: We can combine conditions (1) and (2) above into a single condition by adding a blank character ∅ to the beginning of our ordered alphabet. Then, if s is shorter than t , we simply add as many instances of ∅ as necessary to make s and t the same length.
+- Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/lexv_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

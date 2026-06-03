@@ -431,7 +431,12 @@
       "Bash(sbt \"testOnly bio.domain.analysis.ReadCorrectionProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.ReadCorrectionsSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.ReadErrorCorrectionSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+->[ACGT]+$')"
+      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+->[ACGT]+$')",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.LexOrderProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.LexOrderProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.LexOrderingSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.VaryingLengthLexOrderSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [DNA]+$')"
     ]
   }
 }
