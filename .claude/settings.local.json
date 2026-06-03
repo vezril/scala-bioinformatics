@@ -380,7 +380,8 @@
       "Bash(sbt \"testOnly bio.domain.analysis.MaxGapProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.SpectrumMatchProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.SpectrumMatchResultSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.protein.MatchSpectrumSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.protein.MatchSpectrumSpec\")",
+      "Bash(sbt \"testOnly bio.domain.protein.FullSpectrumProblemSpec\")"
     ]
   }
 }

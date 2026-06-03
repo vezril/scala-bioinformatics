@@ -1425,6 +1425,28 @@ If multiple solutions exist, then you may output any one.
     IASWMQS
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/prsm_data.txt for data input
 
+91. Inferring Peptide from Full Spectrum
+- Problem: Say that we have a string s containing t as an internal substring, so that there exist nonempty substrings s<sub>1</sub> and s<sub>2</sub> of s such that s can be written as s<sub>1</sub>ts<sub>2</sub>. A t-prefix contains all of s<sub>1</sub> and none of s<sub>2</sub>; likewise, a t-suffix contains all of s<sub>2</sub> and none of s<sub>1</sub>.
+- Given: A list L containing 2n+3 positive real numbers (n≤100). The first number in L is the parent mass of a peptide P, and all other numbers represent the masses of some b-ions and y-ions of P (in no particular order). You may assume that if the mass of a b-ion is present, then so is that of its complementary y-ion, and vice-versa.
+- Return: A protein string t of length n for which there exist two positive real numbers w<sub>1</sub> and w<sub>2</sub> such that for every prefix p and suffix s of t, each of w(p)+w<sub>1</sub> and w(s)+w<sub>2</sub> is equal to an element of L. (In other words, there exists a protein string whose t-prefix and t-suffix weights correspond to the non-parent mass values of L.) If multiple solutions exist, you may output any one.
+- Sample Dataset:
+  - Input
+    1988.21104821
+    610.391039105
+    738.485999105
+    766.492149105
+    863.544909105
+    867.528589105
+    992.587499105
+    995.623549105
+    1120.6824591
+    1124.6661391
+    1221.7188991
+    1249.7250491
+    1377.8200091
+  - Output
+    KEKEP
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/full_data.txt for data input
 
 Constraints / non-goals:
 - No auth/roles (for now)
