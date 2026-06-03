@@ -398,7 +398,13 @@
       "Bash(sbt \"testOnly bio.domain.nucleic.WobbleMatchingsSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.nucleic.WobbleMatchingSpec\")",
       "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('schema:',d.get\\('schemaName'\\)\\);[print\\(a['id'],a['status']\\) for a in d['artifacts']]\")",
-      "Bash(read d *)"
+      "Bash(read d *)",
+      "Bash(python3 -c \"import sys,json;d=json.load\\(sys.stdin\\);print\\('applyRequires:',d.get\\('applyRequires'\\)\\);[print\\(a['id'],a['status'],'deps='+str\\(a.get\\('dependencies'\\)\\)\\) for a in d['artifacts']]\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.InterwovenMotifProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.InterwovenMotifProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.InterwovenMotifMatrixSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.InterwovenMotifsSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [01]\\( [01]\\)*$')"
     ]
   }
 }

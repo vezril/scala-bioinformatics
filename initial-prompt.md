@@ -1504,6 +1504,22 @@ If multiple solutions exist, then you may output any one.
   - Output: 284850219977421
 - Extra:
 
+96. Finding Disjoint Motifs in a Gene
+- Problem: Given three strings s, t, and u, we say that t and u can be interwoven into s if there is some substring of s made up of t and u as disjoint subsequences. For example, the strings "ACAG" and "CCG" can be interwoven into "GACCACGGTT". However, they cannot be interwoven into "GACCACAAAAGGTT" because of the appearance of the four 'A's in the middle of the subsequences. Similarly, even though both "ACACG" is a shortest common supersequence of ACAG and CCG, it is not possible to interweave these two strings into "ACACG" because the two desired subsequences must be disjoint; see “Interleaving Two Motifs” for details on finding a shortest common supersequence of two strings.
+- Given: A text DNA string s of length at most 10 kbp, followed by a collection of n (n≤10) DNA strings of length at most 10 bp acting as patterns.
+- Return: An n×n matrix M for which M<sub>j,k</sub>=1 if the j th and k th pattern strings can be interwoven into s and M<sub>j,k</sub>=0 otherwise.
+- Sample Datasets
+  - Input
+    GACCACGGTT
+    ACAG
+    GT
+    CCG
+  - Output
+    0 0 1
+    0 1 0
+    1 0 0
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/itwv_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
