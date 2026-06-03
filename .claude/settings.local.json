@@ -414,7 +414,10 @@
       "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalDistanceProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalDistanceProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalDistanceSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalDistanceSearchSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalDistanceSearchSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalSortingSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalSortingSearchSpec\")"
     ]
   }
 }
