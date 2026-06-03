@@ -89,7 +89,8 @@ object Main extends IOApp {
     //val result = ITWVProb.solve()
     //val result = LGISProb.solve()
     //val result = REARProb.solve()
-    val result = SORTProb.solve()
+    //val result = SORTProb.solve()
+    val result = MMCHProb.solve()
 
     // App-boundary resilience: a runner's effect should print its own errors and never
     // throw, but if one does escape (e.g. a data file is absent on a CI runner), catch

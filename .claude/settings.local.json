@@ -417,7 +417,12 @@
       "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalDistanceSearchSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalSpec\")",
       "Bash(sbt \"testOnly bio.domain.combinatorics.ReversalSortingSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalSortingSearchSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.ReversalSortingSearchSpec\")",
+      "Bash(sbt \"testOnly bio.domain.nucleic.MaximumMatchingProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.nucleic.MaximumMatchingProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.nucleic.MaximumMatchingsSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.nucleic.MaximumMatchingSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+$')"
     ]
   }
 }
