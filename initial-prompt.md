@@ -1583,6 +1583,27 @@ If multiple solutions exist, then you may output any one.
   6
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mmch_data.txt as input data
 
+101. Creating a Distance Matrix
+- Problem: For two strings s<sub>1</sub> and s<sub>2</sub> of equal length, the p-distance between them, denoted dp(s<sub>1</sub>,s<sub>2</sub>), is the proportion of corresponding symbols that differ between s<sub>1</sub> and s<sub>2</sub>. For a general distance function d on n taxa s<sub>1</sub>,s<sub>2</sub>,…,s<sub>n</sub> (taxa are often represented by genetic strings), we may encode the distances between pairs of taxa via a distance matrix D in which D<sub>i,j</sub>=d(s<sub>i</sub>,s<sub>j</sub>).
+- Given: A collection of n(n≤10) DNA strings s<sub>1</sub>,…,s<sub>n</sub> of equal length (at most 1 kbp). Strings are given in FASTA format.
+- Return: The matrix D corresponding to the p-distance d<sub>p</sub> on the given strings. As always, note that your answer is allowed an absolute error of 0.001.
+- Sample Dataset:
+  - Input
+  >Rosalind_9499
+  TTTCCATTTA
+  >Rosalind_0942
+  GATTCATTTC
+  >Rosalind_6568
+  TTTCCATTTT
+  >Rosalind_1833
+  GTTCCATTTA
+  - Output:
+    0.00000 0.40000 0.10000 0.10000
+    0.40000 0.00000 0.40000 0.30000
+    0.10000 0.40000 0.00000 0.20000
+    0.10000 0.30000 0.20000 0.00000
+- Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/pdst_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

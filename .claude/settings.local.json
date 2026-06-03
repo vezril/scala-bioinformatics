@@ -422,7 +422,11 @@
       "Bash(sbt \"testOnly bio.domain.nucleic.MaximumMatchingProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.nucleic.MaximumMatchingsSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.nucleic.MaximumMatchingSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] [0-9]+$')"
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+$')",
+      "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.PDistanceMatrixSpec\")"
     ]
   }
 }
