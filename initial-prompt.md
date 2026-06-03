@@ -1691,6 +1691,22 @@ If multiple solutions exist, then you may output any one.
 - Extra Info: We can combine conditions (1) and (2) above into a single condition by adding a blank character ∅ to the beginning of our ordered alphabet. Then, if s is shorter than t , we simply add as many instances of ∅ as necessary to make s and t the same length.
 - Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/lexv_data.txt for data input
 
+104. Transitions and Transversions
+- Problem: For DNA strings s1 and s2 having the same length, their transition/transversion ratio R(s1,s2) is the ratio of the total number of transitions to the total number of transversions, where symbol substitutions are inferred from mismatched corresponding symbols as when calculating Hamming distance (see “Counting Point Mutations”).
+- Given: Two DNA strings s1 and s2 of equal length (at most 1 kbp).
+- Return: The transition/transversion ratio R(s1,s2).
+- Sample Dataset
+  - Input
+  >Rosalind_0209
+  GCAACGCACAACGAAAACCCTTAGGGACTGGATTATTTCGTGATCGTTGTAGTTATTGGA
+  AGTACGGGCATCAACCCAGTT
+  >Rosalind_2200
+  TTATCTGACAAAGAAAGCCGTCAACGGCTGGATAATTTCGCGATCGTGCTGGTTACTGGC
+  GGTACGAGTGTTCCTTTGGGT
+  - Output
+    1.21428571429
+- Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/tran_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
