@@ -1480,6 +1480,21 @@ If multiple solutions exist, then you may output any one.
     ATGCATGAT
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/scsp_data.txt as input data
 
+94. Newick Format with Edge Weights
+- Problem: In a weighted tree, each edge is assigned a (usually positive) number, called its weight. The distance between two nodes in a weighted tree becomes the sum of the weights along the unique path connecting the nodes. To generalize Newick format to the case of a weighted tree T, during our repeated "key step," if leaves v<sub>1</sub>,v<sub>2</sub>,…,v<sub>n</sub> are neighbors in T, and all these leaves are incident to u, then we replace u with (v<sub>1</sub>:d<sub>1</sub>,v<sub>2</sub>:d<sub>2</sub>,…,v<sub>n</sub>:d<sub>n</sub>)u, where d<sub>i</sub> is now the weight on the edge {v<sub>i</sub>,u}.
+- Given: A collection of n weighted trees (n≤40) in Newick format, with each tree containing at most 200 nodes; each tree T</sub>k</sub> is followed by a pair of nodes x</sub>k</sub> and y</sub>k</sub> in T<sub>k</sub>.
+- Return: A collection of n numbers, for which the k th number represents the distance between x<sub>k</sub> and y<sub>k</sub> in T<sub>k</sub>.
+- Sample Dataset:
+  - Input
+    (dog:42,cat:33);
+    cat dog
+
+    ((dog:4,cat:3):74,robot:98,elephant:58);
+    dog elephant
+  - Output
+    75 136
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/nkew_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

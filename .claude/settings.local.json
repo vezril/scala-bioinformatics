@@ -386,7 +386,11 @@
       "Bash(sbt \"testOnly bio.domain.protein.SpectrumGraphProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceProblemSpec\")",
-      "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceResultSpec\")"
+      "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceResultSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.WeightedNewickTreeSpec\")",
+      "Bash(sbt \"testOnly bio.parsing.WeightedNewickParserSpec\")",
+      "Bash(sbt \"testOnly bio.domain.graph.WeightedTreeDistanceProblemSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.graph.WeightedNewickDistanceSpec\")"
     ]
   }
 }
