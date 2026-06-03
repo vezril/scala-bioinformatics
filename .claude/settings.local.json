@@ -404,7 +404,13 @@
       "Bash(sbt \"testOnly bio.domain.analysis.InterwovenMotifProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.InterwovenMotifMatrixSpec\")",
       "Bash(sbt \"testOnly bio.algorithms.analysis.InterwovenMotifsSpec\")",
-      "Bash(grep -E '^\\\\[info\\\\] [01]\\( [01]\\)*$')"
+      "Bash(grep -E '^\\\\[info\\\\] [01]\\( [01]\\)*$')",
+      "Bash(cd /Users/cfebruary/Code/scala-bioinformatics 2>/dev/null || cd /Users/cference/Code/scala-bioinformatics *)",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.PermutationErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.PermutationSpec\")",
+      "Bash(sbt \"testOnly bio.domain.combinatorics.MonotonicSubsequencesSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.combinatorics.LongestSubsequencesSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [0-9]+\\( [0-9]+\\)*$')"
     ]
   }
 }
