@@ -383,7 +383,10 @@
       "Bash(sbt \"testOnly bio.algorithms.protein.MatchSpectrumSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.FullSpectrumProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.protein.SpectrumGraphProblemErrorSpec\")",
-      "Bash(sbt \"testOnly bio.domain.protein.SpectrumGraphProblemSpec\")"
+      "Bash(sbt \"testOnly bio.domain.protein.SpectrumGraphProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.SupersequenceResultSpec\")"
     ]
   }
 }
