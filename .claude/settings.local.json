@@ -426,7 +426,12 @@
       "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixProblemErrorSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixProblemSpec\")",
       "Bash(sbt \"testOnly bio.domain.analysis.DistanceMatrixSpec\")",
-      "Bash(sbt \"testOnly bio.algorithms.analysis.PDistanceMatrixSpec\")"
+      "Bash(sbt \"testOnly bio.algorithms.analysis.PDistanceMatrixSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReadCorrectionProblemErrorSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReadCorrectionProblemSpec\")",
+      "Bash(sbt \"testOnly bio.domain.analysis.ReadCorrectionsSpec\")",
+      "Bash(sbt \"testOnly bio.algorithms.analysis.ReadErrorCorrectionSpec\")",
+      "Bash(grep -E '^\\\\[info\\\\] [ACGT]+->[ACGT]+$')"
     ]
   }
 }

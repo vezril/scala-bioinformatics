@@ -91,7 +91,8 @@ object Main extends IOApp {
     //val result = REARProb.solve()
     //val result = SORTProb.solve()
     //val result = MMCHProb.solve()
-    val result = PDSTProb.solve()
+    //val result = PDSTProb.solve()
+    val result = CORRProb.solve()
 
     // App-boundary resilience: a runner's effect should print its own errors and never
     // throw, but if one does escape (e.g. a data file is absent on a CI runner), catch
