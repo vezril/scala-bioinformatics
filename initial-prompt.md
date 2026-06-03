@@ -1495,6 +1495,15 @@ If multiple solutions exist, then you may output any one.
     75 136
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/nkew_data.txt for data input
 
+95. Wobble Bonding and RNA Secondary Structures
+- Problem: Given an RNA string s, we will augment the bonding graph of s by adding basepair edges connecting all occurrences of 'U' to all occurrences of 'G' in order to represent possible wobble base pairs. We say that a matching in the bonding graph for s is valid if it is noncrossing (to prevent pseudoknots) and has the property that a basepair edge in the matching cannot connect symbols s<sub>j</sub> and s<sub>k</sub> unless k≥j+4 (to prevent nearby nucleotides from base pairing). See Figure 1 for an example of a valid matching if we allow wobble base pairs. In this problem, we will wish to count all possible valid matchings in a given bonding graph; see Figure 2 for all possible valid matchings in a small bonding graph, assuming that we allow wobble base pairing.
+- Given: An RNA string s (of length at most 200 bp).
+- Return: The total number of distinct valid matchings of basepair edges in the bonding graph of s. Assume that wobble base pairing is allowed.
+- Sample Dataset:
+  - Input: AUGCUAGUACGGAGCGAGUCUAGCGAGCGAUGUCGUGAGUACUAUAUAUGCGCAUAAGCCACGU
+  - Output: 284850219977421
+- Extra:
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI

@@ -84,7 +84,8 @@ object Main extends IOApp {
     //val result = FULLProb.solve()
     //val result = SGRAProb.solve()
     //val result = SCSPProb.solve()
-    val result = NKEWProb.solve()
+    //val result = NKEWProb.solve()
+    val result = RNASProb.solve()
 
     // App-boundary resilience: a runner's effect should print its own errors and never
     // throw, but if one does escape (e.g. a data file is absent on a CI runner), catch
