@@ -1403,6 +1403,27 @@ If multiple solutions exist, then you may output any one.
   - Output: 3
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/mgap_data.txt for data input
 
+90. Matching a Spectrum to a Protein
+- Problem: The complete spectrum of a weighted string s is the multiset S[s] containing the weights of every prefix and suffix of s.
+- Given: A positive integer n followed by a collection of n protein strings s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub> and a multiset R of positive numbers (corresponding to the complete spectrum of some unknown protein string).
+- Return: The maximum multiplicity of R⊖S[sk] taken over all strings s<sub>k</sub>, followed by the string s<sub>k</sub> for which this maximum multiplicity occurs (you may output any such value if multiple solutions exist).
+- Sample Dataset:
+  - Input
+    4
+    GSDMQS
+    VWICN
+    IASWMQS
+    PVSMGAD
+    445.17838
+    115.02694
+    186.07931
+    314.13789
+    317.1198
+    215.09061
+  - Output:
+    3
+    IASWMQS
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/prsm_data.txt for data input
 
 
 Constraints / non-goals:
