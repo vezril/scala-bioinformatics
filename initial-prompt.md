@@ -1448,6 +1448,26 @@ If multiple solutions exist, then you may output any one.
     KEKEP
 - Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/full_data.txt for data input
 
+92. Using the Spectrum Graph to Infer Peptides
+- Problem: For a weighted alphabet 𝒜 and a collection L of positive real numbers, the spectrum graph of L is a digraph constructed in the following way. First, create a node for every real number in L. Then, connect a pair of nodes with a directed edge (u,v) if v>u and v−u is equal to the weight of a single symbol in 𝒜. We may then label the edge with this symbol. In this problem, we say that a weighted string s=s<sub>1</sub>s<sub>2</sub>⋯s<sub>n</sub> matches L if there is some increasing sequence of positive real numbers (w<sub>1</sub>,w<sub>2</sub>,…,w<sub>n+1</sub>) in L such that w(s<sub>1</sub>)=w<sub>2</sub>−w<sub>1</sub>, w(s<sub>2</sub>)=w<sub>3</sub>−w<sub>2</sub>, ..., and w(s<sub>n</sub>)=w<sub>n+1</sub>−w<sub>n</sub>.
+- Given: A list L (of length at most 100) containing positive real numbers.
+- Return: The longest protein string that matches the spectrum graph of L (if multiple solutions exist, you may output any one of them). Consult the monoisotopic mass table.
+- Sample Dataset:
+  - Input
+    3524.8542
+    3623.5245
+    3710.9335
+    3841.974
+    3929.00603
+    3970.0326
+    4026.05879
+    4057.0646
+    4083.08025
+  - Output
+    WMSPG
+- Hint: How can our question be rephrased in terms of the spectrum graph?
+- Extra: Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/sgra_data.txt for data input
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
