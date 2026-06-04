@@ -1707,6 +1707,44 @@ If multiple solutions exist, then you may output any one.
     1.21428571429
 - Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/tran_data.txt for data input
 
+105. Enumerating Oriented Gene Orderings
+- Problem: A signed permutation of length n is some ordering of the positive integers {1,2,…,n} in which each integer is then provided with either a positive or negative sign (for the sake of simplicity, we omit the positive sign). For example, π=(5,−3,−2,1,4) is a signed permutation of length 5.
+- Given: A positive integer n≤6
+- Return: The total number of signed permutations of length n, followed by a list of all such permutations (you may list the signed permutations in any order).
+- Sample Dataset
+  - Input: 2
+  - Output
+    8
+    -1 -2
+    -1 2
+    1 -2
+    1 2
+    -2 -1
+    -2 1
+    2 -1
+    2 1
+- Use /Users/cference/Code/scala-bioinformatics/src/main/scala/resources/sign_data.txt for data input
+
+106. Finding a Protein Motif
+- Problem To allow for the presence of its varying forms, a protein motif is represented by a shorthand as follows: [XY] means "either X or Y" and {X} means "any amino acid except X." For example, the N-glycosylation motif is written as N{P}[ST]{P}. You can see the complete description and features of a particular protein by its access ID "uniprot_id" in the UniProt database, by inserting the ID number into: http://www.uniprot.org/uniprot/uniprot_id
+- Given: At most 15 UniProt Protein Database access IDs.
+- Return: For each protein possessing the N-glycosylation motif, output its given access ID followed by a list of locations in the protein string where the motif can be found.
+- Sample Dataset
+  - Input
+    A2Z669
+    B5ZC00
+    P07204_TRBM_HUMAN
+    P20840_SAG1_YEAST
+  - Output
+    B5ZC00
+    85 118 142 306 395
+    P07204_TRBM_HUMAN
+    47 115 116 382 409
+    P20840_SAG1_YEAST
+    79 109 135 248 306 348 364 402 485 501 614
+- Some entries in UniProt have one primary (citable) accession number and some secondary numbers, appearing due to merging or demerging entries. In this problem, you may be given any type of ID. If you type the secondary ID into the UniProt query, then you will be automatically redirected to the page containing the primary ID.
+- 
+
 Constraints / non-goals:
 - No auth/roles (for now)
 - This is a framework, so no UI
